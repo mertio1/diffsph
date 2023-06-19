@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>diffsph.spectra package &#8212; diffsph 1.0.0. documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="diffsph.utils package" href="diffsph.utils.html" />
+    <link rel="prev" title="diffsph.profiles package" href="diffsph.profiles.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="diffsph-spectra-package">
+<h1>diffsph.spectra package<a class="headerlink" href="#diffsph-spectra-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-diffsph.spectra.analytics">
+<span id="diffsph-spectra-analytics-module"></span><h2>diffsph.spectra.analytics module<a class="headerlink" href="#module-diffsph.spectra.analytics" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.Fav">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">Fav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.Fav" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchrotron-power function for randomly-oriented magnetic fields <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>*<span class="fn-bracket">]</span></a>.</p>
+<div class="math notranslate nohighlight">
+\[F(x) = x^2 \left(K_{4/3}(x) K_{1/3}(x) - \frac35 x [K_{4/3}^2(x) - K_{1/3}^2(x)]\right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pitch-angle averaged synchrotron function as a function of <span class="math notranslate nohighlight">\(x\)</span></p>
+</dd>
+</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">*</a><span class="fn-bracket">]</span></span>
+<p>Formula extracted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1988ApJ...334L...5G%2F/">Ghisellini et al, 1988</a></p>
+</aside>
+</aside>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.M_C">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">M_C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.M_C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master function in the Regime-C limit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal M_C(\xi,\eta,\delta) = \frac{\xi^\delta}{(1-\delta)\eta} F(\xi^2)\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.M_i">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">M_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.M_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master function in the large <span class="math notranslate nohighlight">\(\eta\)</span> limit</p>
+<div class="math notranslate nohighlight">
+\[\mathcal M_i(\xi,\eta,\delta) = \frac{\Gamma^2(1/3)\eta^{-\frac{5}{3(1-\delta)}}}{5\sqrt[3]{2}(1-\delta)}\Gamma\left(\frac{5}{3(1-\delta)},\eta\, \xi^{1 - \delta}\right)\exp\left(\eta\,  \xi^{1-\delta}\right)\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.M_raw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">M_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.M_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Raw” master function</p>
+<div class="math notranslate nohighlight">
+\[\mathcal M(\xi,\eta,\delta) = \int_\xi^\infty dx F(x^2)\exp\left(-\eta\,[x^{1-\delta}-\xi^{1-\delta}]\right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>above integral</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.anltc_Mst">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">anltc_Mst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.anltc_Mst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master function</p>
+<div class="math notranslate nohighlight">
+\[\mathcal M(\xi,\eta,\delta) = \int_\xi^\infty dx F(x^2)\exp\left(-\eta\,[x^{1-\delta}-\xi^{1-\delta}]\right)\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Function evaluates the above integral only for those values where no numerical errors are present. Otherwise, it uses the approximate formulas <a class="reference internal" href="#diffsph.spectra.analytics.M_C" title="diffsph.spectra.analytics.M_C"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.spectra.analytics.M_C()</span></code></a> or <a class="reference internal" href="#diffsph.spectra.analytics.M_i" title="diffsph.spectra.analytics.M_i"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.spectra.analytics.M_i()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.btot">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">btot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.btot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total energy loss function in GeV/s</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – cosmic-ray energy in GeV</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>energy-loss rate in GeV/s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.analytics.lam">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.analytics.</span></span><span class="sig-name descname"><span class="pre">lam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3333333333333333</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.analytics.lam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Syrovatskii variable in kpc<sup>2</sup></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – cosmic-ray energy in GeV</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+<li><p><strong>D0</strong> – magnitude of the diffusion coefficient for a 1 GeV CRE in cm<sup>2</sup>/s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy (default value = 1/3)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Syrovatskii variable in kpc<sup>2</sup></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.spectra.synchrotron">
+<span id="diffsph-spectra-synchrotron-module"></span><h2>diffsph.spectra.synchrotron module<a class="headerlink" href="#module-diffsph.spectra.synchrotron" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.Enu">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">Enu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.Enu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Typical particle energy in GeV for synchrotron radiation at the frequency nu in GHz and for a magnetic field B in <span class="math notranslate nohighlight">\(\mu\)</span>G</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Particle energy in GeV.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.Mst">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">Mst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.Mst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation function for the kernel function <span class="math notranslate nohighlight">\(\hat{\mathcal M}(\xi,\eta,\delta)\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xi</strong> – <span class="math notranslate nohighlight">\(\xi\)</span></p></li>
+<li><p><strong>eta</strong> – <span class="math notranslate nohighlight">\(\eta\)</span></p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Spectral-function kernel (as an interpolation function)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.Mst_DM">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">Mst_DM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.Mst_DM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master function for dark-matter hypotheses</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xi</strong> – <span class="math notranslate nohighlight">\(\xi\)</span></p></li>
+<li><p><strong>eta</strong> – <span class="math notranslate nohighlight">\(\eta\)</span></p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+<li><p><strong>m</strong> – WIMP mass in GeV</p></li>
+<li><p><strong>channel</strong> – annihilation/decay channel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Master function (as an interpolation function) for DM hypotheses</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.Mst_pw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">Mst_pw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.Mst_pw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master function for the generic power-law hypothesis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eta</strong> – <span class="math notranslate nohighlight">\(\eta\)</span></p></li>
+<li><p><strong>Gamma</strong> – <span class="math notranslate nohighlight">\(\Gamma\)</span></p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Master function (as an interpolation function) for the generic power-law hypothesis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.X">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">X</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral function in erg/GHz for all hypotheses built in diffsph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code>, <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Keyword arguments:</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">hyp</span> <span class="pre">=</span> <span class="pre">'wimp'</span></code> or <code class="docutils literal notranslate"><span class="pre">'decay'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mchi</strong> – mass of the DM particle in GeV/<span class="math notranslate nohighlight">\(c^2\)</span></p></li>
+<li><p><strong>channel</strong> (<em>str</em>) – annihilation/decay channel: <span class="math notranslate nohighlight">\(b\bar b\)</span> (<code class="docutils literal notranslate"><span class="pre">'bb'</span></code>), <span class="math notranslate nohighlight">\(\mu^+ \mu^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'mumu'</span></code>), <span class="math notranslate nohighlight">\(W^+ W^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'WW'</span></code>), etc.</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">hyp</span> <span class="pre">=</span> <span class="pre">'generic'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Gamma</strong> – power-law exponent of the generic CRE source (<span class="math notranslate nohighlight">\(1.1 &lt; \Gamma &lt; 3\)</span>)</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>spectral function in erg/GHz</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.X_DM">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">X_DM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mchi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.X_DM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral function in erg/GHz for all DM hypotheses built in diffsph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> – hypothesis index (k=1 for decay and k=2 for annihilation)</p></li>
+<li><p><strong>mchi</strong> – mass of the DM particle in GeV/<span class="math notranslate nohighlight">\(c^2\)</span></p></li>
+<li><p><strong>channel</strong> – annihilation/decay channel: <span class="math notranslate nohighlight">\(b\bar b\)</span> (<code class="docutils literal notranslate"><span class="pre">'bb'</span></code>), <span class="math notranslate nohighlight">\(\mu^+ \mu^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'mumu'</span></code>), <span class="math notranslate nohighlight">\(W^+ W^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'WW'</span></code>), etc.</p></li>
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectral function in erg/GHz</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.X_gen">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">X_gen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Emin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Emax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.X_gen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral function in erg/GHz for generic CRE sources</p>
+<div class="math notranslate nohighlight">
+\[X_\text{gen}(\nu) = \int_{E_m}^{E_M}dE'\hat X(\nu, E')S(E')\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Emin</strong> – low-E cutoff energy in GeV of the CRE source <code class="docutils literal notranslate"><span class="pre">'S_func'</span></code></p></li>
+<li><p><strong>Emax</strong> – high-E cutoff energy in GeV of the CRE source <code class="docutils literal notranslate"><span class="pre">'S_func'</span></code></p></li>
+<li><p><strong>S_func</strong> – CRE source function</p></li>
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectral function in erg/GHz</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.X_pw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">X_pw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.X_pw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral function in erg/GHz for the generic power-law hypothesis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Gamma</strong> – power-law exponent of the generic CRE source (<span class="math notranslate nohighlight">\(1.1 &lt; \Gamma &lt; 3\)</span>)</p></li>
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectral function in erg/GHz</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.eta">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">eta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.eta" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="math notranslate nohighlight">\(\eta\)</span> variable as a function of the CRE’s energy, magnetic field, tau and delta parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – CRE energy in GeV</p></li>
+<li><p><strong>B</strong> – magnetic field strength in µG</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\eta\)</span> variable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.htX">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">htX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fast_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.htX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral function kernel in erg/GHz <span class="math notranslate nohighlight">\(\hat X\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – CRE energy in GeV</p></li>
+<li><p><strong>nu</strong> – frequency in GHz</p></li>
+<li><p><strong>tau</strong> – diffusion time-scale parameter for a 1 GeV CRE in s</p></li>
+<li><p><strong>delta</strong> – power-law exponent of the diffusion coefficient as a function of the CRE’s energy</p></li>
+<li><p><strong>B</strong> – magnitude of the magnetic field’s smooth component in <span class="math notranslate nohighlight">\(\mu\)</span>G</p></li>
+<li><p><strong>fast_comp</strong> (<em>bool</em>) – if <code class="docutils literal notranslate"><span class="pre">'True'</span></code>, employs the interpolating method (default value = <code class="docutils literal notranslate"><span class="pre">'True'</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectral kernel in erg/GHz</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.lMst">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">lMst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Lxi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Leta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.lMst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation function for (kernel) <span class="math notranslate nohighlight">\(\log(\hat{\mathcal M})\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Lxi</strong> – <span class="math notranslate nohighlight">\(\log(\xi)\)</span></p></li>
+<li><p><strong>Leta</strong> – <span class="math notranslate nohighlight">\(\log(\eta)\)</span></p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\log(\hat{\mathcal M})\)</span> as a function of <span class="math notranslate nohighlight">\(\log(\xi)\)</span>, <span class="math notranslate nohighlight">\(\log(\eta)\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.lMst_DM">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">lMst_DM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Lxi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Leta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Lm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.lMst_DM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation function <span class="math notranslate nohighlight">\(\log(\mathcal M)\)</span> for DM hypotheses</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Lxi</strong> – <span class="math notranslate nohighlight">\(\log(\xi)\)</span></p></li>
+<li><p><strong>Leta</strong> – <span class="math notranslate nohighlight">\(\log(\eta)\)</span></p></li>
+<li><p><strong>Lm</strong> – <span class="math notranslate nohighlight">\(\log(m/\text{GeV})\)</span> (<span class="math notranslate nohighlight">\(m\)</span> is the WIMP mass)</p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+<li><p><strong>channel</strong> – annihilation/decay channel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\log(\mathcal M)\)</span> as a function of <span class="math notranslate nohighlight">\(\log(\xi)\)</span>, <span class="math notranslate nohighlight">\(\log(\eta)\)</span>, <span class="math notranslate nohighlight">\(\log(m)\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.spectra.synchrotron.lMst_pw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.spectra.synchrotron.</span></span><span class="sig-name descname"><span class="pre">lMst_pw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Leta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.spectra.synchrotron.lMst_pw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation function <span class="math notranslate nohighlight">\(\log(\mathcal M)\)</span> for the gereric power-law hypothesis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Leta</strong> – <span class="math notranslate nohighlight">\(\log(\eta)\)</span></p></li>
+<li><p><strong>Gamma</strong> – <span class="math notranslate nohighlight">\(\Gamma\)</span></p></li>
+<li><p><strong>delta</strong> – <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\log(\mathcal M_\text{gen})\)</span> as a function of <span class="math notranslate nohighlight">\(\log(\eta)\)</span>, <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.spectra">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-diffsph.spectra" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">diffsph</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">diffsph</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="diffsph.html">diffsph package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="diffsph.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph.limits">diffsph.limits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph.pyflux">diffsph.pyflux module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">diffsph</a><ul>
+  <li><a href="diffsph.html">diffsph package</a><ul>
+      <li>Previous: <a href="diffsph.profiles.html" title="previous chapter">diffsph.profiles package</a></li>
+      <li>Next: <a href="diffsph.utils.html" title="next chapter">diffsph.utils package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Martin Vollmann, Finn Welzmueller, Lovorka Gajovic.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/diffsph.spectra.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

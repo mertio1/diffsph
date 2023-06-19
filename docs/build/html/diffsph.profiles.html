@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>diffsph.profiles package &#8212; diffsph 1.0.0. documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="diffsph.spectra package" href="diffsph.spectra.html" />
+    <link rel="prev" title="diffsph package" href="diffsph.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="diffsph-profiles-package">
+<h1>diffsph.profiles package<a class="headerlink" href="#diffsph-profiles-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-diffsph.profiles.analytics">
+<span id="diffsph-profiles-analytics-module"></span><h2>diffsph.profiles.analytics module<a class="headerlink" href="#module-diffsph.profiles.analytics" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cobrA">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cobrA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cobrA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brightness H-function for the ‘constant’ top-hat source in the regime-A approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> – <span class="math notranslate nohighlight">\(D\sin(\theta)/r_h\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> (<code class="docutils literal notranslate"><span class="pre">theta</span></code>), <span class="math notranslate nohighlight">\(r_h\)</span> (<code class="docutils literal notranslate"><span class="pre">rh</span></code>) and <span class="math notranslate nohighlight">\(D\)</span> (<code class="docutils literal notranslate"><span class="pre">dist</span></code>) are defined below</p></li>
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cobrC">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cobrC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cobrC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brightness H-function for the ‘constant’ source in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> – <span class="math notranslate nohighlight">\(D\sin(\theta)/r_h\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> (<code class="docutils literal notranslate"><span class="pre">theta</span></code>), <span class="math notranslate nohighlight">\(r_h\)</span> (<code class="docutils literal notranslate"><span class="pre">rh</span></code>) and <span class="math notranslate nohighlight">\(D\)</span> (<code class="docutils literal notranslate"><span class="pre">dist</span></code>) are defined below</p></li>
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cofdA">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cofdA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cofdA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flux-density H-function for the ‘constant’ top-hat source in the regime-A approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cofdAmax">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cofdAmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cofdAmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum value for the flux-density H-function for the ‘constant’ top-hat source in the regime-A approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cofdC">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cofdC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cofdC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flux-density H-function for the ‘constant’ top-hat source in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.cofdCmax">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">cofdCmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.cofdCmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum value for the flux-density H-function for the ‘constant’ top-hat source in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.psbrA">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">psbrA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.psbrA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brigthness H-function for point sources in the regime-A approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.psbrC">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">psbrC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.psbrC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brigthness H-function for point sources in the regime-C approximation
+Variable t is defined as</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> – <span class="math notranslate nohighlight">\(D\sin(\theta)/r_h\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> (<code class="docutils literal notranslate"><span class="pre">theta</span></code>), <span class="math notranslate nohighlight">\(r_h\)</span> (<code class="docutils literal notranslate"><span class="pre">rh</span></code>) and <span class="math notranslate nohighlight">\(D\)</span> (<code class="docutils literal notranslate"><span class="pre">dist</span></code>) are defined below</p></li>
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.psfdC">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">psfdC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.psfdC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flux-density H-function for point sources in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.psfdCmax">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">psfdCmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.psfdCmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum value for the flux-density H-function for point sources in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.sisbrA">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">sisbrA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.sisbrA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brightness H-function for the singular isothermal source in the regime-A approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> – <span class="math notranslate nohighlight">\(D\sin(\theta)/r_h\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> (<code class="docutils literal notranslate"><span class="pre">theta</span></code>), <span class="math notranslate nohighlight">\(r_h\)</span> (<code class="docutils literal notranslate"><span class="pre">rh</span></code>) and <span class="math notranslate nohighlight">\(D\)</span> (<code class="docutils literal notranslate"><span class="pre">dist</span></code>) are defined below</p></li>
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.analytics.sisbrC">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.analytics.</span></span><span class="sig-name descname"><span class="pre">sisbrC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.analytics.sisbrC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brightness H-function for the singular isothermal  source in the regime-C approximation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> – <span class="math notranslate nohighlight">\(D\sin(\theta)/r_h\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> (<code class="docutils literal notranslate"><span class="pre">theta</span></code>), <span class="math notranslate nohighlight">\(r_h\)</span> (<code class="docutils literal notranslate"><span class="pre">rh</span></code>) and <span class="math notranslate nohighlight">\(D\)</span> (<code class="docutils literal notranslate"><span class="pre">dist</span></code>) are defined below</p></li>
+<li><p><strong>theta</strong> – angular radius in rad</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter</p></li>
+<li><p><strong>rh</strong> – diffusion radius parameter</p></li>
+<li><p><strong>dist</strong> – distance to the source</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.profiles.hfactors">
+<span id="diffsph-profiles-hfactors-module"></span><h2>diffsph.profiles.hfactors module<a class="headerlink" href="#module-diffsph.profiles.hfactors" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.D_factor">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">D_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.D_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic “D” factor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular distance in rad units</p></li>
+<li><p><strong>dist</strong> – distance to earth</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>D factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.H_brightness">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">H_brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.H_brightness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular distance in rad units</p></li>
+<li><p><strong>dist</strong> – distance to earth</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>halo_model</strong> – DM halo model</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>brightness halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.H_emissivity">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">H_emissivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.H_emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+<li><p><strong>regime</strong> – regime of the approximation (upper/lower case a, b, c or I/II/III).</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>emissivity halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.H_fluxdens">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">H_fluxdens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.H_fluxdens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic flux-density halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular distance in rad units</p></li>
+<li><p><strong>dist</strong> – distance to earth</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>halo_model</strong> – DM halo model</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>flux density halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.H_fluxdens_approx">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">H_fluxdens_approx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.H_fluxdens_approx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic flux-density halo/bulge function in the Regime “A”, “B” or “C” approximations (alternative formula)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular distance in rad units</p></li>
+<li><p><strong>dist</strong> – distance to earth</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>halo_model</strong> – DM halo model</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>flux density halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.Hem_A">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">Hem_A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.Hem_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic emissivity halo/bulge function for Regime A</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>emissivity halo/bulge function using the Regime-A approximation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.Hem_B">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">Hem_B</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.Hem_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic emissivity halo/bulge function for Regime B</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>emissivity halo/bulge function using the Regime-B approximation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.Hem_C">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">Hem_C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.Hem_C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic emissivity halo/bulge function for Regime C</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>emissivity halo/bulge function using the Regime-C approximation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.J_factor">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">J_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.J_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic “J” factor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – angular distance in rad units</p></li>
+<li><p><strong>dist</strong> – distance to earth</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>J factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.hfactors.halo_factor">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.hfactors.</span></span><span class="sig-name descname"><span class="pre">halo_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.hfactors.halo_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>n-th order halo/bulge factor h_n for a given model (e.g. NFW, Einasto, Plummer, …) 
+Arguments <code class="docutils literal notranslate"><span class="pre">'n'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rh'</span></code>, <code class="docutils literal notranslate"><span class="pre">'hyp'</span></code> and <code class="docutils literal notranslate"><span class="pre">'rad_temp'</span></code> are necessary. Remaining arguments depend on the 
+adopted halo model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – order of the halo/bulge factor</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code>)</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>halo/bulge factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.profiles.massmodels">
+<span id="diffsph-profiles-massmodels-module"></span><h2>diffsph.profiles.massmodels module<a class="headerlink" href="#module-diffsph.profiles.massmodels" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.D">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tharcmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific D factor in GeV/cm <span class="math notranslate nohighlight">\({}^2\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tharcmin</strong> – angular radius in arcmin</p></li>
+<li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
+<li><p><strong>rad_temp</strong> (<em>str</em>) – radial template (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>D factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.Hbr">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">Hbr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tharcmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'B'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.Hbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific brightness halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tharcmin</strong> – angular radius in arcmin</p></li>
+<li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
+<li><p><strong>rad_temp</strong> (<em>str</em>) – radial template (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code></p></li>
+<li><p><strong>ratio</strong> – ratio between the diffusion halo/bulge and the half-light radius (default value = 1)</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>brightness halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.Hem">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">Hem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'B'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.Hem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance in kpc</p></li>
+<li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
+<li><p><strong>rad_temp</strong> (<em>str</em>) – radial template (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code></p></li>
+<li><p><strong>ratio</strong> – ratio between the diffusion halo/bulge and the half-light radius (default value = 1)</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>emissivity halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.Hfd">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">Hfd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tharcmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'B'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.Hfd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific flux-density halo/bulge function in the Regime “A”, “B” or “C” approximations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tharcmin</strong> – angular radius in arcmin</p></li>
+<li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
+<li><p><strong>rad_temp</strong> (<em>str</em>) – radial template (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code></p></li>
+<li><p><strong>ratio</strong> – ratio between the diffusion halo/bulge and the half-light radius (default value = 1)</p></li>
+<li><p><strong>regime</strong> – regime of the approximation. Must be either upper or lower case a, b, c or I/II/III.</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>brightness halo/bulge function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.J">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">J</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tharcmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.J" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific J factor in Gev <span class="math notranslate nohighlight">\({}^2\)</span>/cm <span class="math notranslate nohighlight">\({}^5\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tharcmin</strong> – angular radius in arcmin</p></li>
+<li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
+<li><p><strong>rad_temp</strong> (<em>str</em>) – radial template (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>J factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.h">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">h</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">galaxy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model-specific n-th halo factor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – order of the halo/bulge factor</p></li>
+<li><p><strong>rh</strong> – diffusion halo/bulge radius</p></li>
+<li><p><strong>rad_temp</strong> – radial template</p></li>
+<li><p><strong>hyp</strong> (<em>str</em>) – hypothesis: <code class="docutils literal notranslate"><span class="pre">'wimp'</span></code> (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">'decay'</span></code> or <code class="docutils literal notranslate"><span class="pre">'generic'</span></code></p></li>
+<li><p><strong>ratio</strong> – ratio between the diffusion halo/bulge and the half-light radius</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>halo factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.massmodels.rho">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.massmodels.</span></span><span class="sig-name descname"><span class="pre">rho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.massmodels.rho" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dark matter density</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – galactocentric distance</p></li>
+<li><p><strong>rad_temp</strong> – template (‘NFW’, ‘Einasto’, etc.)</p></li>
+<li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Keyword arguments</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'False'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ref</strong> – reference used (<code class="docutils literal notranslate"><span class="pre">'Martinez'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1309.2641'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Geringer-Sameth'</span></code> or <code class="docutils literal notranslate"><span class="pre">'1408.0002'</span></code>, etc.)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">=</span> <span class="pre">'True'</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+<li><p><strong>alpha</strong> – exponent <span class="math notranslate nohighlight">\(\alpha\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>beta</strong> – exponent <span class="math notranslate nohighlight">\(\beta\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>gamma</strong> – exponent <span class="math notranslate nohighlight">\(\gamma\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.hdz" title="diffsph.profiles.templates.hdz"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.hdz()</span></code></a> profile</p></li>
+<li><p><strong>alphaE</strong> – parameter <span class="math notranslate nohighlight">\(\alpha_E\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.enst" title="diffsph.profiles.templates.enst"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.enst()</span></code></a> profile</p></li>
+<li><p><strong>rc</strong> – core radius parameter <span class="math notranslate nohighlight">\(r_c\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.cnfw" title="diffsph.profiles.templates.cnfw"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.cnfw()</span></code></a> profile</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion parameter <span class="math notranslate nohighlight">\(\sigma_v\)</span> in the <a class="reference internal" href="#diffsph.profiles.templates.sis" title="diffsph.profiles.templates.sis"><code class="xref py py-func docutils literal notranslate"><span class="pre">diffsph.profiles.templates.sis()</span></code></a> profile</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dark matter density</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.profiles.templates">
+<span id="diffsph-profiles-templates-module"></span><h2>diffsph.profiles.templates module<a class="headerlink" href="#module-diffsph.profiles.templates" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.bkrt">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">bkrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.bkrt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Burkert dark-matter halo profile.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\rho_s}{(1+r/r_s)(1+r^2/r_s^2)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – charactieristic density</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.cnfw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">cnfw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.cnfw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cored Navarro/Frenk/White dark-matter halo template.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\rho_s}{(r/r_s+r_c/r_s)(1+r/r_s)^2}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – chraracteristic density</p></li>
+<li><p><strong>rc</strong> – core radius</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.const">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.const" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant (top-hat) template</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac3{4\pi r_s^3}\Theta(r_s-r)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rs</strong> – characteristic radius</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>constant density</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.enst">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">enst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphaE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.17</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.enst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Einasto dark-matter halo profile.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \rho_s\exp\left[-\frac{2}{\alpha_E}\left(\frac{r^{\alpha_E}}{r_s^{\alpha_E}}-1\right)\right]\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – charactieristic density</p></li>
+<li><p><strong>alphaE</strong> – power-law slope of the Einasto profile, (default value = 0.17)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.hdz">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">hdz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.hdz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hernquist/Diemand/Zhao dark-matter halo template.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\rho_s}{(r/r_s)^\gamma(1+(r/r_s)^\alpha)^{\frac{\beta-\gamma}\alpha}}\]</div>
+<p>Using default values alpha = 1, beta = 3 and gamma = 1 results in the default NFW halo profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – chraracteristic density</p></li>
+<li><p><strong>alpha</strong> – inner exponent</p></li>
+<li><p><strong>beta</strong> – large-r exponent</p></li>
+<li><p><strong>gamma</strong> – small-r exponent</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance r</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.nfw">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">nfw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.nfw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Navarro/Frenk/White dark-matter halo template.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\rho_s}{(r/r_s)(1+r/r_s)^2}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – chraracteristic density</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.plmm">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">plmm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.plmm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plummer template</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac3{4\pi r_s^3}\frac1{(1+r^2/r_s^2)^{5/2}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (distance to the center)</p></li>
+<li><p><strong>rs</strong> – Plummer radius</p></li>
+<li><p><strong>rhoa</strong> – central density</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density of the Plummer sphere at distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.ps">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">ps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.ps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point source template</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac1{4\pi r^2}\delta(r)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – characteristic radius</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.ps_iso">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">ps_iso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.ps_iso" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pseudo-isothermal sphere dark-matter halo profile.</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\rho_s}{1+r^2/r_s^2}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>rs</strong> – scale radius</p></li>
+<li><p><strong>rhos</strong> – characteristic density</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.profiles.templates.sis">
+<span class="sig-prename descclassname"><span class="pre">diffsph.profiles.templates.</span></span><span class="sig-name descname"><span class="pre">sis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmav</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.profiles.templates.sis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Singular isothermal sphere</p>
+<div class="math notranslate nohighlight">
+\[\rho(r) = \frac{\sigma_v^2}{2\pi G r^2}    \]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> – main variable (galactocentric distance)</p></li>
+<li><p><strong>sigmav</strong> – velocity dispersion</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>density at galactocentric distance <span class="math notranslate nohighlight">\(r\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-diffsph.profiles">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-diffsph.profiles" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">diffsph</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">diffsph</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="diffsph.html">diffsph package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="diffsph.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph.limits">diffsph.limits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph.pyflux">diffsph.pyflux module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffsph.html#module-diffsph">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">diffsph</a><ul>
+  <li><a href="diffsph.html">diffsph package</a><ul>
+      <li>Previous: <a href="diffsph.html" title="previous chapter">diffsph package</a></li>
+      <li>Next: <a href="diffsph.spectra.html" title="next chapter">diffsph.spectra package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Martin Vollmann, Finn Welzmueller, Lovorka Gajovic.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/diffsph.profiles.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
