@@ -1,5 +1,5 @@
 #MacOS
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -67,7 +67,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+*.ipynb_checkpoints
 
 # IPython
 profile_default/
