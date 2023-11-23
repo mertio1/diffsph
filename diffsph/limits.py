@@ -16,7 +16,7 @@ def sigmav_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 3e28
     :param nu: frequency in GHz
     :param a_fit: fitted gaussian amplitude in :math:`\\mu` Jy / beam
     :param sigma_fit: width parameter of the Gaussian template in arcmin
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm :math:`{}^2`/s (default value = :math:`3\\times 10^{28}` cm :math:`{}^2` /s) 
@@ -46,6 +46,17 @@ def sigmav_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 3e28
     :return: upper limit for the WIMP self-annihilation cross-section in cm :math:`{}^3` /s
     :rtype: float
     """
+    conds = [(channel == 'bb' and mchi <= 4), 
+             (channel == 'WW' and mchi <= 80), 
+             (channel == 'ZZ' and mchi <= 91),
+             (channel == 'hh' and mchi <= 125),
+             (channel == 'nunu' and mchi <= 125),
+             (channel == 'tt' and mchi <= 173),
+             mchi <= 1
+            ]
+    if any(conds):
+        return None
+    
     rhalf = gen_data['rhalf [kpc]'][var_to_str(galaxy)]
     dist = gen_data['Dist [kpc]'][var_to_str(galaxy)]
     
@@ -56,6 +67,8 @@ def sigmav_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 3e28
     rargs = {rk: kwargs[rk] for rk in rkeys}
     
     f0 = 2 * sp.sici(np.pi)[0]    # f(n=1,0) is equal to 2 * sp.sici(np.pi)[0]
+    
+
 
     return f0 * a_fit / gauss_convers / synch_brightness_approx(
         0., nu, galaxy, rad_temp, 'wimp', ratio, D0, delta, B, 'B', manual, mchi = mchi, channel = channel, sv = 1, 
@@ -69,7 +82,7 @@ def sigmav_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D0 = 3e
         
     :param nu: frequency in GHz
     :param rms_noise: RMS noise level of the observation in :math:`\\mu` Jy / beam
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param ratio: ratio between the diffusion halo and half-light radii
@@ -102,6 +115,17 @@ def sigmav_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D0 = 3e
     :return: Estimated upper limit on WIMP self-annihilation cross-section in cm :math:`{}^3` /s
     :rtype: float
     """
+    conds = [(channel == 'bb' and mchi <= 4), 
+             (channel == 'WW' and mchi <= 80), 
+             (channel == 'ZZ' and mchi <= 91),
+             (channel == 'hh' and mchi <= 125),
+             (channel == 'nunu' and mchi <= 125),
+             (channel == 'tt' and mchi <= 173),
+             mchi <= 1
+            ]
+    if any(conds):
+        return None
+    
     dist = gen_data['Dist [kpc]'][var_to_str(galaxy)]
     rh = ratio * gen_data['rhalf [kpc]'][var_to_str(galaxy)]
     
@@ -143,7 +167,7 @@ def decay_rate_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 
     :param nu: frequency in GHz
     :param a_fit: fitted gaussian amplitude in :math:`\\mu` Jy / beam
     :param sigma_fit: width parameter of the Gaussian template in arcmin
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm :math:`{}^2`/s (default value = :math:`3\\times 10^{28}` cm :math:`{}^2` /s) 
@@ -173,6 +197,17 @@ def decay_rate_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 
     :return: upper limit on the DM decay rate in 1/s
     :rtype: float
     """
+    conds = [(channel == 'bb' and mchi <= 8.1), 
+             (channel == 'WW' and mchi <= 161), 
+             (channel == 'ZZ' and mchi <= 183),
+             (channel == 'hh' and mchi <= 251),
+             (channel == 'nunu' and mchi <= 251),
+             (channel == 'tt' and mchi <= 174 * 2),
+             mchi <= 2.5
+            ]
+    if any(conds):
+        return None    
+    
     rhalf = gen_data['rhalf [kpc]'][var_to_str(galaxy)]
     dist = gen_data['Dist [kpc]'][var_to_str(galaxy)]
     
@@ -195,7 +230,7 @@ def decay_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D0 
         
     :param nu: frequency in GHz
     :param rms_noise: RMS noise level of the observation in :math:`\\mu` Jy / beam
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param ratio: ratio between the diffusion halo and half-light radii
@@ -228,6 +263,17 @@ def decay_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D0 
     :return: Estimated upper limit on the DM decay rate in 1/s
     :rtype: float
     """
+    conds = [(channel == 'bb' and mchi <= 8), 
+             (channel == 'WW' and mchi <= 160), 
+             (channel == 'ZZ' and mchi <= 182),
+             (channel == 'hh' and mchi <= 250),
+             (channel == 'nunu' and mchi <= 250),
+             (channel == 'tt' and mchi <= 346),
+             mchi <= 2
+            ]
+    if any(conds):
+        return None
+    
     dist = gen_data['Dist [kpc]'][var_to_str(galaxy)]
     rh = ratio * gen_data['rhalf [kpc]'][var_to_str(galaxy)]
     
@@ -251,9 +297,9 @@ def decay_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D0 
     Nbeams = Omega_half / beamsr
     
     return tophat_twosigma_number * rms_noise * Omega_full / synch_flux_density(
-        rad_to_arcmin * theta_h, nu, galaxy, rad_temp, 'decay', ratio, D0, delta, B, manual, high_res, accuracy, 
-        mchi = mchi, channel = channel, width = 1, **rargs
-    ) / np.sqrt( Nbeams)
+            rad_to_arcmin * theta_h, nu, galaxy, rad_temp, 'decay', ratio, D0, delta, B, manual, high_res, accuracy, 
+            mchi = mchi, channel = channel, width = 1, **rargs
+        ) / np.sqrt( Nbeams)
 
 
 def generic_rate_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 = 3e28, delta = 'kol', B = 2, Gamma = 2, **kwargs):
@@ -266,7 +312,7 @@ def generic_rate_gausslim(nu, a_fit, sigma_fit, beam_size, galaxy, rad_temp, D0 
     :param nu: frequency in GHz
     :param a_fit: fitted gaussian amplitude in :math:`\\mu` Jy / beam
     :param sigma_fit: width parameter of the Gaussian template in arcmin
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm :math:`{}^2`/s (default value = :math:`3\\times 10^{28}` cm :math:`{}^2` /s) 
@@ -315,7 +361,7 @@ def generic_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D
                     
     :param nu: frequency in GHz
     :param rms_noise: RMS noise level of the observation in :math:`\\mu` Jy / beam
-    :beam_size: beam size in arcseconds
+    :param beam_size: beam size in arcseconds
     :param str galaxy: name of the galaxy
     :param str rad_temp: dark matter halo model (``'NFW'``, ``'Einasto'``, etc.)
     :param ratio: ratio between the diffusion halo and half-light radii
@@ -368,4 +414,5 @@ def generic_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D
         rad_to_arcmin * theta_h, nu, galaxy, rad_temp, 'generic', ratio, D0, delta, B, True, high_res, accuracy, 
         Gamma = Gamma, rate = 1, **rargs
     ) / np.sqrt( Nbeams)
+    
     

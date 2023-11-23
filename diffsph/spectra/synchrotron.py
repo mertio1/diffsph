@@ -10,7 +10,8 @@ from scipy.interpolate import interpn
 # ########################################################################################################
 # ########################################################################################################
 
-alldata = load_data('diffsph/spectra/Interpolations')
+cwdir = os.path.dirname(os.path.realpath(__file__))
+alldata = load_data(os.path.join(cwdir,'Interpolations'))
 
 
 # %%%%%%%%%%%%%%%%%%%
@@ -124,7 +125,18 @@ def X_DM(k, mchi, channel, nu, tau, delta, B):
     :param B: magnitude of the magnetic field’s smooth component in :math:`\\mu`\G
         
     :return: spectral function in erg/GHz
-    """   
+    """
+    conds = [(channel == 'bb' and mchi <= 4 * 2 / k), 
+             (channel == 'WW' and mchi <= 80 * 2 / k), 
+             (channel == 'ZZ' and mchi <= 91 * 2 / k),
+             (channel == 'hh' and mchi <= 125 * 2 / k),
+             (channel == 'nunu' and mchi <= 125 * 2 / k),
+             (channel == 'tt' and mchi <= 173 * 2 / k),
+             mchi <= 2 / k
+            ]
+    if any(conds):
+        return 0.
+    
     return X0 * B / (1 + (B / Bc)**2) / Enu(B, nu) * Mst_DM(
         2 * Enu(B, nu) / k / mchi, eta(Enu(B, nu), B, tau, delta_float(delta)), k * mchi / 2, delta, channel
     )
