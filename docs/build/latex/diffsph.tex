@@ -7,11 +7,8 @@
 \ifdefined\pdfimageresolution
     \pdfimageresolution= \numexpr \dimexpr1in\relax/\sphinxpxdimen\relax
 \fi
-%% let collapsible pdf bookmarks panel have high depth per default
+%% let collapsable pdf bookmarks panel have high depth per default
 \PassOptionsToPackage{bookmarksdepth=5}{hyperref}
-
-\PassOptionsToPackage{booktabs}{sphinx}
-\PassOptionsToPackage{colorrows}{sphinx}
 
 \PassOptionsToPackage{warn}{textcomp}
 \usepackage[utf8]{inputenc}
@@ -64,18 +61,13 @@
 
 
 \title{diffsph}
-\date{Jun 19, 2023}
+\date{Nov 23, 2023}
 \release{1.0.0.}
 \author{Martin Vollmann, Finn Welzmueller, Lovorka Gajovic}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Release}
 \makeindex
 \begin{document}
-
-\ifdefined\shorthandoff
-  \ifnum\catcode`\=\string=\active\shorthandoff{=}\fi
-  \ifnum\catcode`\"=\active\shorthandoff{"}\fi
-\fi
 
 \pagestyle{empty}
 \sphinxmaketitle
@@ -94,21 +86,15 @@ doi:\sphinxhref{https://iopscience.iop.org/article/10.1088/1475-7516/2021/04/068
 %
 \end{footnote}.
 
-\sphinxstepscope
-
 
 \chapter{diffsph}
 \label{\detokenize{modules:diffsph}}\label{\detokenize{modules::doc}}
-\sphinxstepscope
-
 
 \section{diffsph package}
 \label{\detokenize{diffsph:diffsph-package}}\label{\detokenize{diffsph::doc}}
 
 \subsection{Subpackages}
 \label{\detokenize{diffsph:subpackages}}
-\sphinxstepscope
-
 
 \subsubsection{diffsph.profiles package}
 \label{\detokenize{diffsph.profiles:diffsph-profiles-package}}\label{\detokenize{diffsph.profiles::doc}}
@@ -120,14 +106,11 @@ doi:\sphinxhref{https://iopscience.iop.org/article/10.1088/1475-7516/2021/04/068
 \label{\detokenize{diffsph.profiles:module-diffsph.profiles.analytics}}\label{\detokenize{diffsph.profiles:diffsph-profiles-analytics-module}}\index{module@\spxentry{module}!diffsph.profiles.analytics@\spxentry{diffsph.profiles.analytics}}\index{diffsph.profiles.analytics@\spxentry{diffsph.profiles.analytics}!module@\spxentry{module}}\index{cobrA() (in module diffsph.profiles.analytics)@\spxentry{cobrA()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cobrA}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cobrA}}}{\sphinxparam{\DUrole{n,n}{t}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cobrA}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cobrA}}}{\emph{\DUrole{n}{t}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Brightness H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat source in the regime\sphinxhyphen{}A approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{t}} \textendash{} \(D\sin(\theta)/r_h\), where \(\theta\) (\sphinxcode{\sphinxupquote{theta}}), \(r_h\) (\sphinxcode{\sphinxupquote{rh}}) and \(D\) (\sphinxcode{\sphinxupquote{dist}}) are defined below
@@ -157,14 +140,11 @@ Brightness H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat
 \index{cobrC() (in module diffsph.profiles.analytics)@\spxentry{cobrC()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cobrC}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cobrC}}}{\sphinxparam{\DUrole{n,n}{t}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cobrC}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cobrC}}}{\emph{\DUrole{n}{t}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Brightness H\sphinxhyphen{}function for the ‘constant’ source in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{t}} \textendash{} \(D\sin(\theta)/r_h\), where \(\theta\) (\sphinxcode{\sphinxupquote{theta}}), \(r_h\) (\sphinxcode{\sphinxupquote{rh}}) and \(D\) (\sphinxcode{\sphinxupquote{dist}}) are defined below
@@ -190,14 +170,11 @@ Brightness H\sphinxhyphen{}function for the ‘constant’ source in the regime\
 \index{cofdA() (in module diffsph.profiles.analytics)@\spxentry{cofdA()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdA}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdA}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdA}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdA}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat source in the regime\sphinxhyphen{}A approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in rad
@@ -223,14 +200,11 @@ Flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\s
 \index{cofdAmax() (in module diffsph.profiles.analytics)@\spxentry{cofdAmax()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdAmax}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdAmax}}}{\sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdAmax}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdAmax}}}{\emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat source in the regime\sphinxhyphen{}A approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -252,14 +226,11 @@ Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for th
 \index{cofdC() (in module diffsph.profiles.analytics)@\spxentry{cofdC()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdC}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdC}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdC}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdC}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat source in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in rad
@@ -285,14 +256,11 @@ Flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\s
 \index{cofdCmax() (in module diffsph.profiles.analytics)@\spxentry{cofdCmax()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdCmax}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdCmax}}}{\sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.cofdCmax}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{cofdCmax}}}{\emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for the ‘constant’ top\sphinxhyphen{}hat source in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -314,14 +282,11 @@ Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for th
 \index{psbrA() (in module diffsph.profiles.analytics)@\spxentry{psbrA()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psbrA}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psbrA}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psbrA}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psbrA}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Brigthness H\sphinxhyphen{}function for point sources in the regime\sphinxhyphen{}A approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in rad
@@ -347,15 +312,12 @@ Brigthness H\sphinxhyphen{}function for point sources in the regime\sphinxhyphen
 \index{psbrC() (in module diffsph.profiles.analytics)@\spxentry{psbrC()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psbrC}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psbrC}}}{\sphinxparam{\DUrole{n,n}{t}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psbrC}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psbrC}}}{\emph{\DUrole{n}{t}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Brigthness H\sphinxhyphen{}function for point sources in the regime\sphinxhyphen{}C approximation
 Variable t is defined as
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{t}} \textendash{} \(D\sin(\theta)/r_h\), where \(\theta\) (\sphinxcode{\sphinxupquote{theta}}), \(r_h\) (\sphinxcode{\sphinxupquote{rh}}) and \(D\) (\sphinxcode{\sphinxupquote{dist}}) are defined below
@@ -381,14 +343,11 @@ Variable t is defined as
 \index{psfdC() (in module diffsph.profiles.analytics)@\spxentry{psfdC()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psfdC}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psfdC}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psfdC}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psfdC}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Flux\sphinxhyphen{}density H\sphinxhyphen{}function for point sources in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in rad
@@ -410,14 +369,11 @@ Flux\sphinxhyphen{}density H\sphinxhyphen{}function for point sources in the reg
 \index{psfdCmax() (in module diffsph.profiles.analytics)@\spxentry{psfdCmax()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psfdCmax}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psfdCmax}}}{\sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.psfdCmax}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{psfdCmax}}}{\emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{dist}}}{}
 \sphinxAtStartPar
 Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for point sources in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rh}} \textendash{} diffusion radius parameter
@@ -435,14 +391,11 @@ Maximum value for the flux\sphinxhyphen{}density H\sphinxhyphen{}function for po
 \index{sisbrA() (in module diffsph.profiles.analytics)@\spxentry{sisbrA()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.sisbrA}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{sisbrA}}}{\sphinxparam{\DUrole{n,n}{t}}, \sphinxparam{\DUrole{n,n}{sigmav}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.sisbrA}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{sisbrA}}}{\emph{\DUrole{n}{t}}, \emph{\DUrole{n}{sigmav}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Brightness H\sphinxhyphen{}function for the singular isothermal source in the regime\sphinxhyphen{}A approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{t}} \textendash{} \(D\sin(\theta)/r_h\), where \(\theta\) (\sphinxcode{\sphinxupquote{theta}}), \(r_h\) (\sphinxcode{\sphinxupquote{rh}}) and \(D\) (\sphinxcode{\sphinxupquote{dist}}) are defined below
@@ -472,14 +425,11 @@ Brightness H\sphinxhyphen{}function for the singular isothermal source in the re
 \index{sisbrC() (in module diffsph.profiles.analytics)@\spxentry{sisbrC()}\spxextra{in module diffsph.profiles.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.sisbrC}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{sisbrC}}}{\sphinxparam{\DUrole{n,n}{t}}, \sphinxparam{\DUrole{n,n}{sigmav}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.analytics.sisbrC}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.analytics.}}\sphinxbfcode{\sphinxupquote{sisbrC}}}{\emph{\DUrole{n}{t}}, \emph{\DUrole{n}{sigmav}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Brightness H\sphinxhyphen{}function for the singular isothermal  source in the regime\sphinxhyphen{}C approximation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{t}} \textendash{} \(D\sin(\theta)/r_h\), where \(\theta\) (\sphinxcode{\sphinxupquote{theta}}), \(r_h\) (\sphinxcode{\sphinxupquote{rh}}) and \(D\) (\sphinxcode{\sphinxupquote{dist}}) are defined below
@@ -512,14 +462,11 @@ Brightness H\sphinxhyphen{}function for the singular isothermal  source in the r
 \label{\detokenize{diffsph.profiles:module-diffsph.profiles.hfactors}}\label{\detokenize{diffsph.profiles:diffsph-profiles-hfactors-module}}\index{module@\spxentry{module}!diffsph.profiles.hfactors@\spxentry{diffsph.profiles.hfactors}}\index{diffsph.profiles.hfactors@\spxentry{diffsph.profiles.hfactors}!module@\spxentry{module}}\index{D\_factor() (in module diffsph.profiles.hfactors)@\spxentry{D\_factor()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.D_factor}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{D\_factor}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.D_factor}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{D\_factor}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic “D” factor
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular distance in rad units
@@ -539,7 +486,7 @@ Generic “D” factor
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -574,7 +521,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 D factor
 
@@ -585,14 +532,11 @@ D factor
 \index{H\_brightness() (in module diffsph.profiles.hfactors)@\spxentry{H\_brightness()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_brightness}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_brightness}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{regime}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_brightness}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_brightness}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{regime}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular distance in rad units
@@ -628,7 +572,7 @@ Generic emissivity halo/bulge function in the Regime “A”, “B” or “C”
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -663,7 +607,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 brightness halo/bulge function
 
@@ -674,14 +618,11 @@ brightness halo/bulge function
 \index{H\_emissivity() (in module diffsph.profiles.hfactors)@\spxentry{H\_emissivity()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_emissivity}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_emissivity}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{regime}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_emissivity}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_emissivity}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{regime}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance
@@ -709,7 +650,7 @@ Generic emissivity halo/bulge function in the Regime “A”, “B” or “C”
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -744,7 +685,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 emissivity halo/bulge function
 
@@ -755,14 +696,11 @@ emissivity halo/bulge function
 \index{H\_fluxdens() (in module diffsph.profiles.hfactors)@\spxentry{H\_fluxdens()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_fluxdens}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_fluxdens}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{regime}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_fluxdens}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_fluxdens}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{regime}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic flux\sphinxhyphen{}density halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular distance in rad units
@@ -798,7 +736,7 @@ Generic flux\sphinxhyphen{}density halo/bulge function in the Regime “A”, �
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -833,7 +771,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 flux density halo/bulge function
 
@@ -844,14 +782,11 @@ flux density halo/bulge function
 \index{H\_fluxdens\_approx() (in module diffsph.profiles.hfactors)@\spxentry{H\_fluxdens\_approx()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_fluxdens_approx}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_fluxdens\_approx}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{regime}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.H_fluxdens_approx}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{H\_fluxdens\_approx}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{regime}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic flux\sphinxhyphen{}density halo/bulge function in the Regime “A”, “B” or “C” approximations (alternative formula)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular distance in rad units
@@ -887,7 +822,7 @@ Generic flux\sphinxhyphen{}density halo/bulge function in the Regime “A”, �
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -922,7 +857,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 flux density halo/bulge function
 
@@ -933,14 +868,11 @@ flux density halo/bulge function
 \index{Hem\_A() (in module diffsph.profiles.hfactors)@\spxentry{Hem\_A()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_A}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_A}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_A}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_A}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic emissivity halo/bulge function for Regime A
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance
@@ -964,7 +896,7 @@ Generic emissivity halo/bulge function for Regime A
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -999,7 +931,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 emissivity halo/bulge function using the Regime\sphinxhyphen{}A approximation
 
@@ -1010,14 +942,11 @@ emissivity halo/bulge function using the Regime\sphinxhyphen{}A approximation
 \index{Hem\_B() (in module diffsph.profiles.hfactors)@\spxentry{Hem\_B()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_B}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_B}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_B}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_B}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic emissivity halo/bulge function for Regime B
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance
@@ -1041,7 +970,7 @@ Generic emissivity halo/bulge function for Regime B
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1076,7 +1005,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 emissivity halo/bulge function using the Regime\sphinxhyphen{}B approximation
 
@@ -1087,14 +1016,11 @@ emissivity halo/bulge function using the Regime\sphinxhyphen{}B approximation
 \index{Hem\_C() (in module diffsph.profiles.hfactors)@\spxentry{Hem\_C()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_C}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_C}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.Hem_C}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{Hem\_C}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic emissivity halo/bulge function for Regime C
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance
@@ -1118,7 +1044,7 @@ Generic emissivity halo/bulge function for Regime C
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1153,7 +1079,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 emissivity halo/bulge function using the Regime\sphinxhyphen{}C approximation
 
@@ -1164,14 +1090,11 @@ emissivity halo/bulge function using the Regime\sphinxhyphen{}C approximation
 \index{J\_factor() (in module diffsph.profiles.hfactors)@\spxentry{J\_factor()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.J_factor}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{J\_factor}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.J_factor}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{J\_factor}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Generic “J” factor
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular distance in rad units
@@ -1191,7 +1114,7 @@ Generic “J” factor
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1226,7 +1149,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 J factor
 
@@ -1237,16 +1160,13 @@ J factor
 \index{halo\_factor() (in module diffsph.profiles.hfactors)@\spxentry{halo\_factor()}\spxextra{in module diffsph.profiles.hfactors}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.halo_factor}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{halo\_factor}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{rh}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.hfactors.halo_factor}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.hfactors.}}\sphinxbfcode{\sphinxupquote{halo\_factor}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{rh}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 n\sphinxhyphen{}th order halo/bulge factor h\_n for a given model (e.g. NFW, Einasto, Plummer, …) 
 Arguments \sphinxcode{\sphinxupquote{\textquotesingle{}n\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}rh\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}hyp\textquotesingle{}}} and \sphinxcode{\sphinxupquote{\textquotesingle{}rad\_temp\textquotesingle{}}} are necessary. Remaining arguments depend on the 
 adopted halo model.
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{n}} \textendash{} order of the halo/bulge factor
@@ -1270,7 +1190,7 @@ adopted halo model.
 \sphinxAtStartPar
 Keyword arguments
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1305,7 +1225,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 halo/bulge factor
 
@@ -1319,14 +1239,11 @@ halo/bulge factor
 \label{\detokenize{diffsph.profiles:module-diffsph.profiles.massmodels}}\label{\detokenize{diffsph.profiles:diffsph-profiles-massmodels-module}}\index{module@\spxentry{module}!diffsph.profiles.massmodels@\spxentry{diffsph.profiles.massmodels}}\index{diffsph.profiles.massmodels@\spxentry{diffsph.profiles.massmodels}!module@\spxentry{module}}\index{D() (in module diffsph.profiles.massmodels)@\spxentry{D()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.D}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{D}}}{\sphinxparam{\DUrole{n,n}{tharcmin}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.D}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{D}}}{\emph{\DUrole{n}{tharcmin}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific D factor in GeV/cm \({}^2\)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{tharcmin}} \textendash{} angular radius in arcmin
@@ -1356,7 +1273,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1368,7 +1285,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1403,7 +1320,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 D factor
 
@@ -1414,14 +1331,11 @@ D factor
 \index{Hbr() (in module diffsph.profiles.massmodels)@\spxentry{Hbr()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hbr}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hbr}}}{\sphinxparam{\DUrole{n,n}{tharcmin}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hbr}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hbr}}}{\emph{\DUrole{n}{tharcmin}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific brightness halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{tharcmin}} \textendash{} angular radius in arcmin
@@ -1463,7 +1377,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1475,7 +1389,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1510,7 +1424,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 brightness halo/bulge function
 
@@ -1521,14 +1435,11 @@ brightness halo/bulge function
 \index{Hem() (in module diffsph.profiles.massmodels)@\spxentry{Hem()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hem}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hem}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hem}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hem}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific emissivity halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance in kpc
@@ -1570,7 +1481,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1582,7 +1493,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1617,7 +1528,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 emissivity halo/bulge function
 
@@ -1628,14 +1539,11 @@ emissivity halo/bulge function
 \index{Hfd() (in module diffsph.profiles.massmodels)@\spxentry{Hfd()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hfd}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hfd}}}{\sphinxparam{\DUrole{n,n}{tharcmin}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.Hfd}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{Hfd}}}{\emph{\DUrole{n}{tharcmin}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific flux\sphinxhyphen{}density halo/bulge function in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{tharcmin}} \textendash{} angular radius in arcmin
@@ -1677,7 +1585,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1689,7 +1597,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1724,7 +1632,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 brightness halo/bulge function
 
@@ -1735,14 +1643,11 @@ brightness halo/bulge function
 \index{J() (in module diffsph.profiles.massmodels)@\spxentry{J()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.J}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{J}}}{\sphinxparam{\DUrole{n,n}{tharcmin}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.J}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{J}}}{\emph{\DUrole{n}{tharcmin}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific J factor in Gev \({}^2\)/cm \({}^5\)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{tharcmin}} \textendash{} angular radius in arcmin
@@ -1772,7 +1677,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1784,7 +1689,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1819,7 +1724,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 J factor
 
@@ -1830,14 +1735,11 @@ J factor
 \index{h() (in module diffsph.profiles.massmodels)@\spxentry{h()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.h}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{h}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.h}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{h}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific n\sphinxhyphen{}th halo factor
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{n}} \textendash{} order of the halo/bulge factor
@@ -1875,7 +1777,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1887,7 +1789,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -1922,7 +1824,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 halo factor
 
@@ -1933,14 +1835,11 @@ halo factor
 \index{rho() (in module diffsph.profiles.massmodels)@\spxentry{rho()}\spxextra{in module diffsph.profiles.massmodels}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.rho}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{rho}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.massmodels.rho}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.massmodels.}}\sphinxbfcode{\sphinxupquote{rho}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Dark matter density
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance
@@ -1966,7 +1865,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -1978,7 +1877,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius
@@ -2013,7 +1912,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 dark matter density
 
@@ -2027,16 +1926,13 @@ dark matter density
 \label{\detokenize{diffsph.profiles:module-diffsph.profiles.templates}}\label{\detokenize{diffsph.profiles:diffsph-profiles-templates-module}}\index{module@\spxentry{module}!diffsph.profiles.templates@\spxentry{diffsph.profiles.templates}}\index{diffsph.profiles.templates@\spxentry{diffsph.profiles.templates}!module@\spxentry{module}}\index{bkrt() (in module diffsph.profiles.templates)@\spxentry{bkrt()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.bkrt}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{bkrt}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.bkrt}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{bkrt}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}}{}
 \sphinxAtStartPar
 Burkert dark\sphinxhyphen{}matter halo profile.
 \begin{equation*}
 \begin{split}\rho(r) = \frac{\rho_s}{(1+r/r_s)(1+r^2/r_s^2)}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2051,7 +1947,7 @@ Burkert dark\sphinxhyphen{}matter halo profile.
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2062,16 +1958,13 @@ density at galactocentric distance \(r\)
 \index{cnfw() (in module diffsph.profiles.templates)@\spxentry{cnfw()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.cnfw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{cnfw}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}, \sphinxparam{\DUrole{n,n}{rc}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.cnfw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{cnfw}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}, \emph{\DUrole{n}{rc}}}{}
 \sphinxAtStartPar
 Cored Navarro/Frenk/White dark\sphinxhyphen{}matter halo template.
 \begin{equation*}
 \begin{split}\rho(r) = \frac{\rho_s}{(r/r_s+r_c/r_s)(1+r/r_s)^2}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2090,7 +1983,7 @@ Cored Navarro/Frenk/White dark\sphinxhyphen{}matter halo template.
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2101,20 +1994,17 @@ density at galactocentric distance \(r\)
 \index{const() (in module diffsph.profiles.templates)@\spxentry{const()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.const}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{const}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.const}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{const}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}}{}
 \sphinxAtStartPar
 Constant (top\sphinxhyphen{}hat) template
 \begin{equation*}
 \begin{split}\rho(r) = \frac3{4\pi r_s^3}\Theta(r_s-r)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} characteristic radius
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 constant density
 
@@ -2125,16 +2015,13 @@ constant density
 \index{enst() (in module diffsph.profiles.templates)@\spxentry{enst()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.enst}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{enst}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}, \sphinxparam{\DUrole{n,n}{alphaE}\DUrole{o,o}{=}\DUrole{default_value}{0.17}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.enst}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{enst}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}, \emph{\DUrole{n}{alphaE}\DUrole{o}{=}\DUrole{default_value}{0.17}}}{}
 \sphinxAtStartPar
 Einasto dark\sphinxhyphen{}matter halo profile.
 \begin{equation*}
 \begin{split}\rho(r) = \rho_s\exp\left[-\frac{2}{\alpha_E}\left(\frac{r^{\alpha_E}}{r_s^{\alpha_E}}-1\right)\right]\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2153,7 +2040,7 @@ Einasto dark\sphinxhyphen{}matter halo profile.
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2164,10 +2051,7 @@ density at galactocentric distance \(r\)
 \index{hdz() (in module diffsph.profiles.templates)@\spxentry{hdz()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.hdz}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{hdz}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}, \sphinxparam{\DUrole{n,n}{alpha}}, \sphinxparam{\DUrole{n,n}{beta}}, \sphinxparam{\DUrole{n,n}{gamma}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.hdz}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{hdz}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}, \emph{\DUrole{n}{alpha}}, \emph{\DUrole{n}{beta}}, \emph{\DUrole{n}{gamma}}}{}
 \sphinxAtStartPar
 Hernquist/Diemand/Zhao dark\sphinxhyphen{}matter halo template.
 \begin{equation*}
@@ -2176,7 +2060,7 @@ Hernquist/Diemand/Zhao dark\sphinxhyphen{}matter halo template.
 \sphinxAtStartPar
 Using default values alpha = 1, beta = 3 and gamma = 1 results in the default NFW halo profile.
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2203,7 +2087,7 @@ Using default values alpha = 1, beta = 3 and gamma = 1 results in the default NF
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance r
 
@@ -2214,16 +2098,13 @@ density at galactocentric distance r
 \index{nfw() (in module diffsph.profiles.templates)@\spxentry{nfw()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.nfw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{nfw}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.nfw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{nfw}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}}{}
 \sphinxAtStartPar
 Navarro/Frenk/White dark\sphinxhyphen{}matter halo template.
 \begin{equation*}
 \begin{split}\rho(r) = \frac{\rho_s}{(r/r_s)(1+r/r_s)^2}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2238,7 +2119,7 @@ Navarro/Frenk/White dark\sphinxhyphen{}matter halo template.
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2249,16 +2130,13 @@ density at galactocentric distance \(r\)
 \index{plmm() (in module diffsph.profiles.templates)@\spxentry{plmm()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.plmm}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{plmm}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.plmm}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{plmm}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}}{}
 \sphinxAtStartPar
 Plummer template
 \begin{equation*}
 \begin{split}\rho(r) = \frac3{4\pi r_s^3}\frac1{(1+r^2/r_s^2)^{5/2}}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (distance to the center)
@@ -2273,7 +2151,7 @@ Plummer template
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density of the Plummer sphere at distance \(r\)
 
@@ -2284,16 +2162,13 @@ density of the Plummer sphere at distance \(r\)
 \index{ps() (in module diffsph.profiles.templates)@\spxentry{ps()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.ps}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{ps}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.ps}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{ps}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}}{}
 \sphinxAtStartPar
 Point source template
 \begin{equation*}
 \begin{split}\rho(r) = \frac1{4\pi r^2}\delta(r)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2304,7 +2179,7 @@ Point source template
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2315,16 +2190,13 @@ density at galactocentric distance \(r\)
 \index{ps\_iso() (in module diffsph.profiles.templates)@\spxentry{ps\_iso()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.ps_iso}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{ps\_iso}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{rs}}, \sphinxparam{\DUrole{n,n}{rhos}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.ps_iso}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{ps\_iso}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{rs}}, \emph{\DUrole{n}{rhos}}}{}
 \sphinxAtStartPar
 Pseudo\sphinxhyphen{}isothermal sphere dark\sphinxhyphen{}matter halo profile.
 \begin{equation*}
 \begin{split}\rho(r) = \frac{\rho_s}{1+r^2/r_s^2}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2339,7 +2211,7 @@ Pseudo\sphinxhyphen{}isothermal sphere dark\sphinxhyphen{}matter halo profile.
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2350,16 +2222,13 @@ density at galactocentric distance \(r\)
 \index{sis() (in module diffsph.profiles.templates)@\spxentry{sis()}\spxextra{in module diffsph.profiles.templates}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.sis}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{sis}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{sigmav}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.profiles:diffsph.profiles.templates.sis}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.profiles.templates.}}\sphinxbfcode{\sphinxupquote{sis}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{sigmav}}}{}
 \sphinxAtStartPar
 Singular isothermal sphere
 \begin{equation*}
 \begin{split}\rho(r) = \frac{\sigma_v^2}{2\pi G r^2}    \end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} main variable (galactocentric distance)
@@ -2370,7 +2239,7 @@ Singular isothermal sphere
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 density at galactocentric distance \(r\)
 
@@ -2382,8 +2251,6 @@ density at galactocentric distance \(r\)
 
 \paragraph{Module contents}
 \label{\detokenize{diffsph.profiles:module-diffsph.profiles}}\label{\detokenize{diffsph.profiles:module-contents}}\index{module@\spxentry{module}!diffsph.profiles@\spxentry{diffsph.profiles}}\index{diffsph.profiles@\spxentry{diffsph.profiles}!module@\spxentry{module}}
-\sphinxstepscope
-
 
 \subsubsection{diffsph.spectra package}
 \label{\detokenize{diffsph.spectra:diffsph-spectra-package}}\label{\detokenize{diffsph.spectra::doc}}
@@ -2395,20 +2262,17 @@ density at galactocentric distance \(r\)
 \label{\detokenize{diffsph.spectra:module-diffsph.spectra.analytics}}\label{\detokenize{diffsph.spectra:diffsph-spectra-analytics-module}}\index{module@\spxentry{module}!diffsph.spectra.analytics@\spxentry{diffsph.spectra.analytics}}\index{diffsph.spectra.analytics@\spxentry{diffsph.spectra.analytics}!module@\spxentry{module}}\index{Fav() (in module diffsph.spectra.analytics)@\spxentry{Fav()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.Fav}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{Fav}}}{\sphinxparam{\DUrole{n,n}{x}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.Fav}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{Fav}}}{\emph{\DUrole{n}{x}}}{}
 \sphinxAtStartPar
 Synchrotron\sphinxhyphen{}power function for randomly\sphinxhyphen{}oriented magnetic fields %
-\begin{footnote}\sphinxAtStartFootnote
+\begin{footnote}[*]\sphinxAtStartFootnote
 Formula extracted from \sphinxhref{https://ui.adsabs.harvard.edu/abs/1988ApJ...334L...5G\%2F/}{Ghisellini et al, 1988}
 %
 \end{footnote}.
 \begin{equation*}
 \begin{split}F(x) = x^2 \left(K_{4/3}(x) K_{1/3}(x) - \frac35 x [K_{4/3}^2(x) - K_{1/3}^2(x)]\right)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Pitch\sphinxhyphen{}angle averaged synchrotron function as a function of \(x\)
 
@@ -2419,10 +2283,7 @@ Pitch\sphinxhyphen{}angle averaged synchrotron function as a function of \(x\)
 \index{M\_C() (in module diffsph.spectra.analytics)@\spxentry{M\_C()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_C}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_C}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_C}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_C}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Master function in the Regime\sphinxhyphen{}C limit
 \begin{equation*}
@@ -2433,10 +2294,7 @@ Master function in the Regime\sphinxhyphen{}C limit
 \index{M\_i() (in module diffsph.spectra.analytics)@\spxentry{M\_i()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_i}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_i}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_i}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_i}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Master function in the large \(\eta\) limit
 \begin{equation*}
@@ -2447,16 +2305,13 @@ Master function in the large \(\eta\) limit
 \index{M\_raw() (in module diffsph.spectra.analytics)@\spxentry{M\_raw()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_raw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_raw}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.M_raw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{M\_raw}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 “Raw” master function
 \begin{equation*}
 \begin{split}\mathcal M(\xi,\eta,\delta) = \int_\xi^\infty dx F(x^2)\exp\left(-\eta\,[x^{1-\delta}-\xi^{1-\delta}]\right)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 above integral
 
@@ -2467,10 +2322,7 @@ above integral
 \index{anltc\_Mst() (in module diffsph.spectra.analytics)@\spxentry{anltc\_Mst()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.anltc_Mst}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{anltc\_Mst}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.anltc_Mst}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{anltc\_Mst}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Master function
 \begin{equation*}
@@ -2486,14 +2338,11 @@ Function evaluates the above integral only for those values where no numerical e
 \index{btot() (in module diffsph.spectra.analytics)@\spxentry{btot()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.btot}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{btot}}}{\sphinxparam{\DUrole{n,n}{E}}, \sphinxparam{\DUrole{n,n}{B}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.btot}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{btot}}}{\emph{\DUrole{n}{E}}, \emph{\DUrole{n}{B}}}{}
 \sphinxAtStartPar
 Total energy loss function in GeV/s
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{E}} \textendash{} cosmic\sphinxhyphen{}ray energy in GeV
@@ -2504,7 +2353,7 @@ Total energy loss function in GeV/s
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 energy\sphinxhyphen{}loss rate in GeV/s
 
@@ -2515,14 +2364,11 @@ energy\sphinxhyphen{}loss rate in GeV/s
 \index{lam() (in module diffsph.spectra.analytics)@\spxentry{lam()}\spxextra{in module diffsph.spectra.analytics}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.lam}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{lam}}}{\sphinxparam{\DUrole{n,n}{E}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{D0}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{0.3333333333333333}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.analytics.lam}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.analytics.}}\sphinxbfcode{\sphinxupquote{lam}}}{\emph{\DUrole{n}{E}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{D0}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{0.3333333333333333}}}{}
 \sphinxAtStartPar
 Syrovatskii variable in kpc$^{\text{2}}$
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{E}} \textendash{} cosmic\sphinxhyphen{}ray energy in GeV
@@ -2541,7 +2387,7 @@ Syrovatskii variable in kpc$^{\text{2}}$
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Syrovatskii variable in kpc$^{\text{2}}$
 
@@ -2555,14 +2401,11 @@ Syrovatskii variable in kpc$^{\text{2}}$
 \label{\detokenize{diffsph.spectra:module-diffsph.spectra.synchrotron}}\label{\detokenize{diffsph.spectra:diffsph-spectra-synchrotron-module}}\index{module@\spxentry{module}!diffsph.spectra.synchrotron@\spxentry{diffsph.spectra.synchrotron}}\index{diffsph.spectra.synchrotron@\spxentry{diffsph.spectra.synchrotron}!module@\spxentry{module}}\index{Enu() (in module diffsph.spectra.synchrotron)@\spxentry{Enu()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Enu}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Enu}}}{\sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{nu}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Enu}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Enu}}}{\emph{\DUrole{n}{B}}, \emph{\DUrole{n}{nu}}}{}
 \sphinxAtStartPar
 Typical particle energy in GeV for synchrotron radiation at the frequency nu in GHz and for a magnetic field B in \(\mu\)G
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{B}} \textendash{} magnitude of the magnetic field’s smooth component in \(\mu\)G
@@ -2573,7 +2416,7 @@ Typical particle energy in GeV for synchrotron radiation at the frequency nu in 
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Particle energy in GeV.
 
@@ -2584,14 +2427,11 @@ Particle energy in GeV.
 \index{Mst() (in module diffsph.spectra.synchrotron)@\spxentry{Mst()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Interpolation function for the kernel function \(\hat{\mathcal M}(\xi,\eta,\delta)\)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{xi}} \textendash{} \(\xi\)
@@ -2606,7 +2446,7 @@ Interpolation function for the kernel function \(\hat{\mathcal M}(\xi,\eta,\delt
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Spectral\sphinxhyphen{}function kernel (as an interpolation function)
 
@@ -2617,14 +2457,11 @@ Spectral\sphinxhyphen{}function kernel (as an interpolation function)
 \index{Mst\_DM() (in module diffsph.spectra.synchrotron)@\spxentry{Mst\_DM()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst_DM}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst\_DM}}}{\sphinxparam{\DUrole{n,n}{xi}}, \sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{m}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{channel}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst_DM}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst\_DM}}}{\emph{\DUrole{n}{xi}}, \emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{m}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{channel}}}{}
 \sphinxAtStartPar
 Master function for dark\sphinxhyphen{}matter hypotheses
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{xi}} \textendash{} \(\xi\)
@@ -2647,7 +2484,7 @@ Master function for dark\sphinxhyphen{}matter hypotheses
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Master function (as an interpolation function) for DM hypotheses
 
@@ -2658,14 +2495,11 @@ Master function (as an interpolation function) for DM hypotheses
 \index{Mst\_pw() (in module diffsph.spectra.synchrotron)@\spxentry{Mst\_pw()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst_pw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst\_pw}}}{\sphinxparam{\DUrole{n,n}{eta}}, \sphinxparam{\DUrole{n,n}{Gamma}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.Mst_pw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{Mst\_pw}}}{\emph{\DUrole{n}{eta}}, \emph{\DUrole{n}{Gamma}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Master function for the generic power\sphinxhyphen{}law hypothesis
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{eta}} \textendash{} \(\eta\)
@@ -2680,7 +2514,7 @@ Master function for the generic power\sphinxhyphen{}law hypothesis
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Master function (as an interpolation function) for the generic power\sphinxhyphen{}law hypothesis
 
@@ -2691,14 +2525,11 @@ Master function (as an interpolation function) for the generic power\sphinxhyphe
 \index{X() (in module diffsph.spectra.synchrotron)@\spxentry{X()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Spectral function in erg/GHz for all hypotheses built in diffsph
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -2740,7 +2571,7 @@ If \sphinxcode{\sphinxupquote{hyp = \textquotesingle{}wimp\textquotesingle{}}} o
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{mchi}} \textendash{} mass of the DM particle in GeV/\(c^2\)
@@ -2759,7 +2590,7 @@ If \sphinxcode{\sphinxupquote{hyp = \textquotesingle{}generic\textquotesingle{}}
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
 
@@ -2769,7 +2600,7 @@ If \sphinxcode{\sphinxupquote{hyp = \textquotesingle{}generic\textquotesingle{}}
 \item[] 
 \end{DUlineblock}
 \begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 spectral function in erg/GHz
 
@@ -2780,14 +2611,11 @@ spectral function in erg/GHz
 \index{X\_DM() (in module diffsph.spectra.synchrotron)@\spxentry{X\_DM()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_DM}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_DM}}}{\sphinxparam{\DUrole{n,n}{k}}, \sphinxparam{\DUrole{n,n}{mchi}}, \sphinxparam{\DUrole{n,n}{channel}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_DM}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_DM}}}{\emph{\DUrole{n}{k}}, \emph{\DUrole{n}{mchi}}, \emph{\DUrole{n}{channel}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}}{}
 \sphinxAtStartPar
 Spectral function in erg/GHz for all DM hypotheses built in diffsph
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{k}} \textendash{} hypothesis index (k=1 for decay and k=2 for annihilation)
@@ -2818,7 +2646,7 @@ Spectral function in erg/GHz for all DM hypotheses built in diffsph
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 spectral function in erg/GHz
 
@@ -2829,16 +2657,13 @@ spectral function in erg/GHz
 \index{X\_gen() (in module diffsph.spectra.synchrotron)@\spxentry{X\_gen()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_gen}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_gen}}}{\sphinxparam{\DUrole{n,n}{Emin}}, \sphinxparam{\DUrole{n,n}{Emax}}, \sphinxparam{\DUrole{n,n}{S\_func}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_gen}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_gen}}}{\emph{\DUrole{n}{Emin}}, \emph{\DUrole{n}{Emax}}, \emph{\DUrole{n}{S\_func}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}}{}
 \sphinxAtStartPar
 Spectral function in erg/GHz for generic CRE sources
 \begin{equation*}
 \begin{split}X_\text{gen}(\nu) = \int_{E_m}^{E_M}dE'\hat X(\nu, E')S(E')\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Emin}} \textendash{} low\sphinxhyphen{}E cutoff energy in GeV of the CRE source \sphinxcode{\sphinxupquote{\textquotesingle{}S\_func\textquotesingle{}}}
@@ -2869,7 +2694,7 @@ Spectral function in erg/GHz for generic CRE sources
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 spectral function in erg/GHz
 
@@ -2880,14 +2705,11 @@ spectral function in erg/GHz
 \index{X\_pw() (in module diffsph.spectra.synchrotron)@\spxentry{X\_pw()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_pw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_pw}}}{\sphinxparam{\DUrole{n,n}{Gamma}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.X_pw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{X\_pw}}}{\emph{\DUrole{n}{Gamma}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}}{}
 \sphinxAtStartPar
 Spectral function in erg/GHz for the generic power\sphinxhyphen{}law hypothesis
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -2910,7 +2732,7 @@ Spectral function in erg/GHz for the generic power\sphinxhyphen{}law hypothesis
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 spectral function in erg/GHz
 
@@ -2921,14 +2743,11 @@ spectral function in erg/GHz
 \index{eta() (in module diffsph.spectra.synchrotron)@\spxentry{eta()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.eta}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{eta}}}{\sphinxparam{\DUrole{n,n}{E}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.eta}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{eta}}}{\emph{\DUrole{n}{E}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 \(\eta\) variable as a function of the CRE’s energy, magnetic field, tau and delta parameters
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{E}} \textendash{} CRE energy in GeV
@@ -2947,7 +2766,7 @@ spectral function in erg/GHz
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(\eta\) variable
 
@@ -2958,14 +2777,11 @@ spectral function in erg/GHz
 \index{htX() (in module diffsph.spectra.synchrotron)@\spxentry{htX()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.htX}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{htX}}}{\sphinxparam{\DUrole{n,n}{E}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{tau}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{fast\_comp}\DUrole{o,o}{=}\DUrole{default_value}{True}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.htX}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{htX}}}{\emph{\DUrole{n}{E}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{tau}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{fast\_comp}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
 \sphinxAtStartPar
 Spectral function kernel in erg/GHz \(\hat X\)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{E}} \textendash{} CRE energy in GeV
@@ -2992,7 +2808,7 @@ Spectral function kernel in erg/GHz \(\hat X\)
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 spectral kernel in erg/GHz
 
@@ -3003,14 +2819,11 @@ spectral kernel in erg/GHz
 \index{lMst() (in module diffsph.spectra.synchrotron)@\spxentry{lMst()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst}}}{\sphinxparam{\DUrole{n,n}{Lxi}}, \sphinxparam{\DUrole{n,n}{Leta}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst}}}{\emph{\DUrole{n}{Lxi}}, \emph{\DUrole{n}{Leta}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Interpolation function for (kernel) \(\log(\hat{\mathcal M})\)
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Lxi}} \textendash{} \(\log(\xi)\)
@@ -3025,7 +2838,7 @@ Interpolation function for (kernel) \(\log(\hat{\mathcal M})\)
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(\log(\hat{\mathcal M})\) as a function of \(\log(\xi)\), \(\log(\eta)\) and \(\delta\)
 
@@ -3036,14 +2849,11 @@ Interpolation function for (kernel) \(\log(\hat{\mathcal M})\)
 \index{lMst\_DM() (in module diffsph.spectra.synchrotron)@\spxentry{lMst\_DM()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst_DM}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst\_DM}}}{\sphinxparam{\DUrole{n,n}{Lxi}}, \sphinxparam{\DUrole{n,n}{Leta}}, \sphinxparam{\DUrole{n,n}{Lm}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{channel}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst_DM}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst\_DM}}}{\emph{\DUrole{n}{Lxi}}, \emph{\DUrole{n}{Leta}}, \emph{\DUrole{n}{Lm}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{channel}}}{}
 \sphinxAtStartPar
 Interpolation function \(\log(\mathcal M)\) for DM hypotheses
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Lxi}} \textendash{} \(\log(\xi)\)
@@ -3066,7 +2876,7 @@ Interpolation function \(\log(\mathcal M)\) for DM hypotheses
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(\log(\mathcal M)\) as a function of \(\log(\xi)\), \(\log(\eta)\), \(\log(m)\) and \(\delta\)
 
@@ -3077,14 +2887,11 @@ Interpolation function \(\log(\mathcal M)\) for DM hypotheses
 \index{lMst\_pw() (in module diffsph.spectra.synchrotron)@\spxentry{lMst\_pw()}\spxextra{in module diffsph.spectra.synchrotron}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst_pw}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst\_pw}}}{\sphinxparam{\DUrole{n,n}{Leta}}, \sphinxparam{\DUrole{n,n}{Gamma}}, \sphinxparam{\DUrole{n,n}{delta}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.spectra:diffsph.spectra.synchrotron.lMst_pw}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.spectra.synchrotron.}}\sphinxbfcode{\sphinxupquote{lMst\_pw}}}{\emph{\DUrole{n}{Leta}}, \emph{\DUrole{n}{Gamma}}, \emph{\DUrole{n}{delta}}}{}
 \sphinxAtStartPar
 Interpolation function \(\log(\mathcal M)\) for the gereric power\sphinxhyphen{}law hypothesis
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Leta}} \textendash{} \(\log(\eta)\)
@@ -3099,7 +2906,7 @@ Interpolation function \(\log(\mathcal M)\) for the gereric power\sphinxhyphen{}
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(\log(\mathcal M_\text{gen})\) as a function of \(\log(\eta)\), \(\Gamma\) and \(\delta\)
 
@@ -3111,8 +2918,6 @@ Interpolation function \(\log(\mathcal M)\) for the gereric power\sphinxhyphen{}
 
 \paragraph{Module contents}
 \label{\detokenize{diffsph.spectra:module-diffsph.spectra}}\label{\detokenize{diffsph.spectra:module-contents}}\index{module@\spxentry{module}!diffsph.spectra@\spxentry{diffsph.spectra}}\index{diffsph.spectra@\spxentry{diffsph.spectra}!module@\spxentry{module}}
-\sphinxstepscope
-
 
 \subsubsection{diffsph.utils package}
 \label{\detokenize{diffsph.utils:diffsph-utils-package}}\label{\detokenize{diffsph.utils::doc}}
@@ -3130,16 +2935,13 @@ Interpolation function \(\log(\mathcal M)\) for the gereric power\sphinxhyphen{}
 \label{\detokenize{diffsph.utils:module-diffsph.utils.tools}}\label{\detokenize{diffsph.utils:diffsph-utils-tools-module}}\index{module@\spxentry{module}!diffsph.utils.tools@\spxentry{diffsph.utils.tools}}\index{diffsph.utils.tools@\spxentry{diffsph.utils.tools}!module@\spxentry{module}}\index{TB() (in module diffsph.utils.tools)@\spxentry{TB()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.TB}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{TB}}}{\sphinxparam{\DUrole{n,n}{brightness}}, \sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{o,o}{*}\DUrole{n,n}{args}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.TB}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{TB}}}{\emph{\DUrole{n}{brightness}}, \emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{o}{*}\DUrole{n}{args}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Brightness temperature conversion
 \begin{equation*}
 \begin{split}T_B = \frac{c^2}{2\,k\,\nu^2}I_\nu\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{brightness}} \textendash{} generic brightness function in Jy/sr
@@ -3154,7 +2956,7 @@ Brightness temperature conversion
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 brightness temperature in mK
 
@@ -3165,10 +2967,7 @@ brightness temperature in mK
 \index{approxhalo\_fd() (in module diffsph.utils.tools)@\spxentry{approxhalo\_fd()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.approxhalo_fd}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{approxhalo\_fd}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.approxhalo_fd}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{approxhalo\_fd}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Partial (\(\theta\)\sphinxhyphen{}dependent) flux\sphinxhyphen{}density halo/bulge factor (approximate formula):
 \begin{equation*}
@@ -3182,10 +2981,7 @@ where \(R\), \(rh\) and \(n\) are, respectively the distance, halo radius and Fo
 \index{approxhalo\_fd\_tot() (in module diffsph.utils.tools)@\spxentry{approxhalo\_fd\_tot()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.approxhalo_fd_tot}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{approxhalo\_fd\_tot}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.approxhalo_fd_tot}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{approxhalo\_fd\_tot}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Total flux\sphinxhyphen{}density halo/bulge factor (approximate formula):
 \begin{equation*}
@@ -3199,22 +2995,19 @@ where \(R\), \(rh\) and \(n\) are, respectively the distance, halo radius and Fo
 \index{delta\_float() (in module diffsph.utils.tools)@\spxentry{delta\_float()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.delta_float}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{delta\_float}}}{\sphinxparam{\DUrole{n,n}{inp}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.delta_float}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{delta\_float}}}{\emph{\DUrole{n}{inp}}}{}
 \sphinxAtStartPar
 Float number for variable \sphinxcode{\sphinxupquote{\textquotesingle{}delta\textquotesingle{}}}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{inp}} \textendash{} variable \sphinxcode{\sphinxupquote{\textquotesingle{}delta\textquotesingle{}}} as \sphinxstyleemphasis{str} (\sphinxcode{\sphinxupquote{\textquotesingle{}kol\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}kra\textquotesingle{}}}, etc.) or \sphinxstyleemphasis{float}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 float number associated with \sphinxcode{\sphinxupquote{\textquotesingle{}inp\textquotesingle{}}}
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -3225,23 +3018,17 @@ float
 \index{df() (in module diffsph.utils.tools)@\spxentry{df()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.df}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{df}}}{\sphinxparam{\DUrole{n,n}{func}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.df}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{df}}}{\emph{\DUrole{n}{func}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \end{fulllineitems}
 
 \index{evaluate() (in module diffsph.utils.tools)@\spxentry{evaluate()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.evaluate}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{evaluate}}}{\sphinxparam{\DUrole{n,n}{f}}, \sphinxparam{\DUrole{n,n}{x}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.evaluate}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{evaluate}}}{\emph{\DUrole{n}{f}}, \emph{\DUrole{n}{x}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Function converts string into a python function’s name and evaluates it
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{f}} \textendash{} function to be evaluated
@@ -3252,7 +3039,7 @@ Function converts string into a python function’s name and evaluates it
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(f(x)\)
 
@@ -3263,16 +3050,13 @@ Function converts string into a python function’s name and evaluates it
 \index{f() (in module diffsph.utils.tools)@\spxentry{f()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.f}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{f}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{x}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.f}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{f}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{x}}}{}
 \sphinxAtStartPar
 Basis function in Fourier\sphinxhyphen{}expanded brightness formula
 \begin{equation*}
 \begin{split}f_n(x)=2\int_x^1\frac{\sin(n\pi y) dy}{\sqrt{y^2-x^2}}\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(f_n\) as a function of \(x\)
 
@@ -3283,14 +3067,11 @@ Basis function in Fourier\sphinxhyphen{}expanded brightness formula
 \index{fwhm() (in module diffsph.utils.tools)@\spxentry{fwhm()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.fwhm}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{fwhm}}}{\sphinxparam{\DUrole{n,n}{brightness}}, \sphinxparam{\DUrole{n,n}{thmax}}, \sphinxparam{\DUrole{o,o}{*}\DUrole{n,n}{args}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.fwhm}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{fwhm}}}{\emph{\DUrole{n}{brightness}}, \emph{\DUrole{n}{thmax}}, \emph{\DUrole{o}{*}\DUrole{n}{args}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Full width at half maximum
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{brightness}} \textendash{} generic brightness function
@@ -3301,7 +3082,7 @@ Full width at half maximum
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Full width at half maximum in arcmin
 
@@ -3312,16 +3093,13 @@ Full width at half maximum in arcmin
 \index{g() (in module diffsph.utils.tools)@\spxentry{g()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.g}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{g}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{x}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.g}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{g}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{x}}}{}
 \sphinxAtStartPar
 Basis function in Fourier\sphinxhyphen{}expanded flux density formula
 \begin{equation*}
 \begin{split}g_n(x)=2\int_x^1\sqrt{y^2-x^2}\sin(n\pi y) dy\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \(g_n\) as a function of \(x\)
 
@@ -3332,10 +3110,7 @@ Basis function in Fourier\sphinxhyphen{}expanded flux density formula
 \index{halo\_fd() (in module diffsph.utils.tools)@\spxentry{halo\_fd()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.halo_fd}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{halo\_fd}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.halo_fd}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{halo\_fd}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Partial (\(\theta\)\sphinxhyphen{}dependent) flux\sphinxhyphen{}density halo/bulge factor:
 \begin{equation*}
@@ -3349,10 +3124,7 @@ where \(R\), \(rh\) and \(n\) are, respectively the distance, halo radius and Fo
 \index{halo\_fd\_tot() (in module diffsph.utils.tools)@\spxentry{halo\_fd\_tot()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.halo_fd_tot}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{halo\_fd\_tot}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{dist}}, \sphinxparam{\DUrole{n,n}{rh}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.halo_fd_tot}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{halo\_fd\_tot}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{dist}}, \emph{\DUrole{n}{rh}}}{}
 \sphinxAtStartPar
 Total flux\sphinxhyphen{}density halo/bulge factor:
 \begin{equation*}
@@ -3361,7 +3133,7 @@ Total flux\sphinxhyphen{}density halo/bulge factor:
 \sphinxAtStartPar
 where \(R\), \(rh\) and \(n\) are, respectively the distance, halo radius and Fourier index
 \begin{quote}\begin{description}
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Halo flux\sphinxhyphen{}density factor
 
@@ -3372,14 +3144,11 @@ Halo flux\sphinxhyphen{}density factor
 \index{hfd() (in module diffsph.utils.tools)@\spxentry{hfd()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.hfd}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{hfd}}}{\sphinxparam{\DUrole{n,n}{fluxdens}}, \sphinxparam{\DUrole{n,n}{thmax}}, \sphinxparam{\DUrole{o,o}{*}\DUrole{n,n}{args}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.hfd}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{hfd}}}{\emph{\DUrole{n}{fluxdens}}, \emph{\DUrole{n}{thmax}}, \emph{\DUrole{o}{*}\DUrole{n}{args}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Half\sphinxhyphen{}flux diameter
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{brightness}} \textendash{} generic brightness function
@@ -3390,7 +3159,7 @@ Half\sphinxhyphen{}flux diameter
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Half\sphinxhyphen{}flux diameter in arcmin
 
@@ -3401,22 +3170,19 @@ Half\sphinxhyphen{}flux diameter in arcmin
 \index{hypothesis\_index() (in module diffsph.utils.tools)@\spxentry{hypothesis\_index()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.hypothesis_index}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{hypothesis\_index}}}{\sphinxparam{\DUrole{n,n}{hyp}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.hypothesis_index}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{hypothesis\_index}}}{\emph{\DUrole{n}{hyp}}}{}
 \sphinxAtStartPar
 Index of the hypothesis (1 for decaying DM or generic scenario, 2 for WIMP self\sphinxhyphen{}annihilation).
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{hyp}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} hypothesis: \sphinxcode{\sphinxupquote{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}decay\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}generic\textquotesingle{}}})
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 hypothesis index
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 int
 
@@ -3427,10 +3193,7 @@ int
 \index{ker\_0() (in module diffsph.utils.tools)@\spxentry{ker\_0()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.ker_0}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{ker\_0}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures\begin{equation*}
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.ker_0}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{ker\_0}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{dist}}}{}~\begin{equation*}
 \begin{split}\kappa_0(r,R) = \frac1{R}\log\sqrt{\frac{R+r}{R-r}}\end{split}
 \end{equation*}
 \end{fulllineitems}
@@ -3438,10 +3201,7 @@ int
 \index{ker\_1() (in module diffsph.utils.tools)@\spxentry{ker\_1()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.ker_1}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{ker\_1}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{dist}}}{}
-\pysigstopsignatures\begin{equation*}
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.ker_1}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{ker\_1}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{dist}}}{}~\begin{equation*}
 \begin{split}\kappa_1(\theta,r,R) = \frac1{R}\log\frac{R\cos\theta+\sqrt{r^2-R^2\sin^2\theta}}{\sqrt{R^2-r^2}}\end{split}
 \end{equation*}
 \end{fulllineitems}
@@ -3449,10 +3209,7 @@ int
 \index{load\_data() (in module diffsph.utils.tools)@\spxentry{load\_data()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.load_data}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{load\_data}}}{\sphinxparam{\DUrole{n,n}{folder}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.load_data}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{load\_data}}}{\emph{\DUrole{n}{folder}}}{}
 \sphinxAtStartPar
 Function loads data from folder
 
@@ -3461,10 +3218,7 @@ Function loads data from folder
 \index{sort\_kwargs() (in module diffsph.utils.tools)@\spxentry{sort\_kwargs()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.sort_kwargs}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{sort\_kwargs}}}{\sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.sort_kwargs}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{sort\_kwargs}}}{\emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Function sorts keyword arguments alphabetically
 
@@ -3473,22 +3227,19 @@ Function sorts keyword arguments alphabetically
 \index{var\_to\_str() (in module diffsph.utils.tools)@\spxentry{var\_to\_str()}\spxextra{in module diffsph.utils.tools}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.var_to_str}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{var\_to\_str}}}{\sphinxparam{\DUrole{n,n}{inp}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph.utils:diffsph.utils.tools.var_to_str}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.utils.tools.}}\sphinxbfcode{\sphinxupquote{var\_to\_str}}}{\emph{\DUrole{n}{inp}}}{}
 \sphinxAtStartPar
 Dictionary for variables \sphinxcode{\sphinxupquote{\textquotesingle{}delta\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}hyp\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}galaxy\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}ref\textquotesingle{}}} and \sphinxcode{\sphinxupquote{\textquotesingle{}rad\_temp\textquotesingle{}}}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{inp}} \textendash{} input string or number
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 default variable name
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 str
 
@@ -3508,16 +3259,13 @@ str
 \label{\detokenize{diffsph:module-diffsph.limits}}\label{\detokenize{diffsph:diffsph-limits-module}}\index{module@\spxentry{module}!diffsph.limits@\spxentry{diffsph.limits}}\index{diffsph.limits@\spxentry{diffsph.limits}!module@\spxentry{module}}\index{decay\_rate\_gausslim() (in module diffsph.limits)@\spxentry{decay\_rate\_gausslim()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.decay_rate_gausslim}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{decay\_rate\_gausslim}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{a\_fit}}, \sphinxparam{\DUrole{n,n}{sigma\_fit}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{mchi}\DUrole{o,o}{=}\DUrole{default_value}{50}}, \sphinxparam{\DUrole{n,n}{channel}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.decay_rate_gausslim}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{decay\_rate\_gausslim}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{a\_fit}}, \emph{\DUrole{n}{sigma\_fit}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{mchi}\DUrole{o}{=}\DUrole{default_value}{50}}, \emph{\DUrole{n}{channel}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Maximum dark matter decay rate allowed by the exclusion of a Gaussian\sphinxhyphen{}shaped signal
 \begin{equation*}
 \begin{split}a_\text{fit}\exp\left(-\frac{\theta^2}{2\sigma_\text{fit}^2}\right)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -3564,7 +3312,7 @@ Maximum dark matter decay rate allowed by the exclusion of a Gaussian\sphinxhyph
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -3579,7 +3327,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -3591,7 +3339,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -3622,11 +3370,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 upper limit on the DM decay rate in 1/s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -3637,14 +3385,11 @@ float
 \index{decay\_rate\_limest() (in module diffsph.limits)@\spxentry{decay\_rate\_limest()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.decay_rate_limest}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{decay\_rate\_limest}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{rms\_noise}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{mchi}\DUrole{o,o}{=}\DUrole{default_value}{50}}, \sphinxparam{\DUrole{n,n}{channel}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.decay_rate_limest}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{decay\_rate\_limest}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{rms\_noise}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{mchi}\DUrole{o}{=}\DUrole{default_value}{50}}, \emph{\DUrole{n}{channel}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 (Estimated) maximum dark matter decay rate given the rms noise level of an observation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -3699,7 +3444,7 @@ float
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -3714,7 +3459,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -3726,7 +3471,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -3757,11 +3502,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Estimated upper limit on the DM decay rate in 1/s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -3772,16 +3517,13 @@ float
 \index{generic\_rate\_gausslim() (in module diffsph.limits)@\spxentry{generic\_rate\_gausslim()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.generic_rate_gausslim}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{generic\_rate\_gausslim}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{a\_fit}}, \sphinxparam{\DUrole{n,n}{sigma\_fit}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{Gamma}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.generic_rate_gausslim}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{generic\_rate\_gausslim}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{a\_fit}}, \emph{\DUrole{n}{sigma\_fit}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{Gamma}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Maximum CRE production rate (generic power\sphinxhyphen{}law hypothesis) allowed by the exclusion of a Gaussian\sphinxhyphen{}shaped signal
 \begin{equation*}
 \begin{split}a_\text{fit}\exp\left(-\frac{\theta^2}{2\sigma_\text{fit}^2}\right)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -3824,7 +3566,7 @@ Maximum CRE production rate (generic power\sphinxhyphen{}law hypothesis) allowed
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -3839,7 +3581,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -3851,7 +3593,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -3862,11 +3604,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 upper limit on the generic CRE production rate in 1/s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -3877,14 +3619,11 @@ float
 \index{generic\_rate\_limest() (in module diffsph.limits)@\spxentry{generic\_rate\_limest()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.generic_rate_limest}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{generic\_rate\_limest}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{rms\_noise}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{Gamma}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.generic_rate_limest}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{generic\_rate\_limest}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{rms\_noise}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{Gamma}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 (Estimated) maximum CRE production rate (generic power\sphinxhyphen{}law hypothesis) given the rms noise level of an observation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -3935,7 +3674,7 @@ float
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -3950,7 +3689,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -3962,7 +3701,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -3973,11 +3712,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Estimated upper limit on the generic CRE production rate in 1/s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -3988,16 +3727,13 @@ float
 \index{sigmav\_gausslim() (in module diffsph.limits)@\spxentry{sigmav\_gausslim()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.sigmav_gausslim}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{sigmav\_gausslim}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{a\_fit}}, \sphinxparam{\DUrole{n,n}{sigma\_fit}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{mchi}\DUrole{o,o}{=}\DUrole{default_value}{50}}, \sphinxparam{\DUrole{n,n}{channel}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{self\_conjugate}\DUrole{o,o}{=}\DUrole{default_value}{True}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.sigmav_gausslim}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{sigmav\_gausslim}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{a\_fit}}, \emph{\DUrole{n}{sigma\_fit}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{mchi}\DUrole{o}{=}\DUrole{default_value}{50}}, \emph{\DUrole{n}{channel}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \emph{\DUrole{n}{self\_conjugate}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Maximum WIMP self\sphinxhyphen{}annihilation cross\sphinxhyphen{}section allowed by the exclusion of a Gaussian\sphinxhyphen{}shaped signal
 \begin{equation*}
 \begin{split}a_\text{fit}\exp\left(-\frac{\theta^2}{2\sigma_\text{fit}^2}\right)\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -4048,7 +3784,7 @@ Maximum WIMP self\sphinxhyphen{}annihilation cross\sphinxhyphen{}section allowed
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -4063,7 +3799,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4075,7 +3811,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -4102,11 +3838,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 upper limit for the WIMP self\sphinxhyphen{}annihilation cross\sphinxhyphen{}section in cm \({}^3\) /s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -4117,14 +3853,11 @@ float
 \index{sigmav\_limest() (in module diffsph.limits)@\spxentry{sigmav\_limest()}\spxextra{in module diffsph.limits}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.limits.sigmav_limest}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{sigmav\_limest}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{rms\_noise}}, \sphinxparam{\DUrole{n,n}{beam\_size}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{mchi}\DUrole{o,o}{=}\DUrole{default_value}{50}}, \sphinxparam{\DUrole{n,n}{channel}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{self\_conjugate}\DUrole{o,o}{=}\DUrole{default_value}{True}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.limits.sigmav_limest}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.limits.}}\sphinxbfcode{\sphinxupquote{sigmav\_limest}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{rms\_noise}}, \emph{\DUrole{n}{beam\_size}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{mchi}\DUrole{o}{=}\DUrole{default_value}{50}}, \emph{\DUrole{n}{channel}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}mumu\textquotesingle{}}}, \emph{\DUrole{n}{self\_conjugate}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 (Estimated) maximum WIMP self\sphinxhyphen{}annihilation cross\sphinxhyphen{}section given the rms noise level of an observation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -4183,7 +3916,7 @@ float
 
 \end{itemize}
 
-\sphinxlineitem{Beam\_size}
+\item[{Beam\_size}] \leavevmode
 \sphinxAtStartPar
 beam size in arcseconds
 
@@ -4198,7 +3931,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4210,7 +3943,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -4237,11 +3970,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Estimated upper limit on WIMP self\sphinxhyphen{}annihilation cross\sphinxhyphen{}section in cm \({}^3\) /s
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -4255,16 +3988,13 @@ float
 \label{\detokenize{diffsph:module-diffsph.pyflux}}\label{\detokenize{diffsph:diffsph-pyflux-module}}\index{module@\spxentry{module}!diffsph.pyflux@\spxentry{diffsph.pyflux}}\index{diffsph.pyflux@\spxentry{diffsph.pyflux}!module@\spxentry{module}}\index{coeff() (in module diffsph.pyflux)@\spxentry{coeff()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.coeff}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{coeff}}}{\sphinxparam{\DUrole{n,n}{n}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{D0}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.coeff}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{coeff}}}{\emph{\DUrole{n}{n}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{D0}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 n\sphinxhyphen{}th coefficient participating in the Fourier\sphinxhyphen{}expanded Green’s function solution of the CRE transport equation
 \begin{equation*}
 \begin{split}s_n = h_n\times X_n\end{split}
 \end{equation*}\begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{n}} \textendash{} order of the halo/bulge factor
@@ -4322,7 +4052,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -4349,7 +4079,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -4372,7 +4102,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -4391,7 +4121,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4403,7 +4133,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -4438,7 +4168,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 \sphinxtitleref{n}\sphinxhyphen{}th coefficient in the \sphinxtitleref{which\_N} function
 
@@ -4449,14 +4179,11 @@ Keyword arguments
 \index{synch\_TB() (in module diffsph.pyflux)@\spxentry{synch\_TB()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_TB}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_TB}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_TB}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_TB}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific brightness temperature from synchrotron radiation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -4518,7 +4245,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -4545,7 +4272,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -4568,7 +4295,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -4587,7 +4314,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4599,7 +4326,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -4634,7 +4361,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Brightness temperature in mK
 
@@ -4645,14 +4372,11 @@ Brightness temperature in mK
 \index{synch\_TB\_approx() (in module diffsph.pyflux)@\spxentry{synch\_TB\_approx()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_TB_approx}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_TB\_approx}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_TB_approx}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_TB\_approx}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific brightness temperature in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -4710,7 +4434,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -4737,7 +4461,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -4760,7 +4484,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -4779,7 +4503,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4791,7 +4515,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -4826,7 +4550,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Brightness temperature in mK
 
@@ -4837,14 +4561,11 @@ Brightness temperature in mK
 \index{synch\_brightness() (in module diffsph.pyflux)@\spxentry{synch\_brightness()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_brightness}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_brightness}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_brightness}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_brightness}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific brightness from synchrotron radiation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -4906,7 +4627,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -4933,7 +4654,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -4956,7 +4677,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -4975,7 +4696,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -4987,7 +4708,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5022,11 +4743,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Brightness in Jy/sr
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -5037,14 +4758,11 @@ float
 \index{synch\_brightness\_approx() (in module diffsph.pyflux)@\spxentry{synch\_brightness\_approx()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_brightness_approx}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_brightness\_approx}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_brightness_approx}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_brightness\_approx}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific brightness from synchrotron radiation in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -5102,7 +4820,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -5129,7 +4847,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -5152,7 +4870,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -5171,7 +4889,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -5183,7 +4901,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5218,7 +4936,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Brightness in Jy/sr
 
@@ -5229,14 +4947,11 @@ Brightness in Jy/sr
 \index{synch\_emissivity() (in module diffsph.pyflux)@\spxentry{synch\_emissivity()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_emissivity}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_emissivity}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_emissivity}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_emissivity}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific emissivity from synchrotron radiation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance in kpc
@@ -5298,7 +5013,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -5325,7 +5040,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -5348,7 +5063,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -5367,7 +5082,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -5379,7 +5094,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5414,11 +5129,11 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Emissivity in erg/cm \({}^3\) /Hz/s/sr
 
-\sphinxlineitem{Return type}
+\item[{Return type}] \leavevmode
 \sphinxAtStartPar
 float
 
@@ -5429,14 +5144,11 @@ float
 \index{synch\_emissivity\_approx() (in module diffsph.pyflux)@\spxentry{synch\_emissivity\_approx()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_emissivity_approx}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_emissivity\_approx}}}{\sphinxparam{\DUrole{n,n}{r}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_emissivity_approx}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_emissivity\_approx}}}{\emph{\DUrole{n}{r}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific emissivity from synchrotron radiation in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{r}} \textendash{} galactocentric distance in kpc
@@ -5494,7 +5206,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -5521,7 +5233,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -5544,7 +5256,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -5563,7 +5275,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -5575,7 +5287,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5610,7 +5322,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Emissivity in erg/cm \({}^3\) /Hz/s/sr
 
@@ -5621,14 +5333,11 @@ Emissivity in erg/cm \({}^3\) /Hz/s/sr
 \index{synch\_flux\_density() (in module diffsph.pyflux)@\spxentry{synch\_flux\_density()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_flux_density}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_flux\_density}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_flux_density}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_flux\_density}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific flux density from synchrotron radiation
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -5690,7 +5399,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -5717,7 +5426,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -5740,7 +5449,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -5759,7 +5468,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -5771,7 +5480,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5806,7 +5515,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Flux density in µJy
 
@@ -5817,14 +5526,11 @@ Flux density in µJy
 \index{synch\_flux\_density\_approx() (in module diffsph.pyflux)@\spxentry{synch\_flux\_density\_approx()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_flux_density_approx}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_flux\_density\_approx}}}{\sphinxparam{\DUrole{n,n}{theta}}, \sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{ratio}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{n,n}{D0}\DUrole{o,o}{=}\DUrole{default_value}{3e+28}}, \sphinxparam{\DUrole{n,n}{delta}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{B}\DUrole{o,o}{=}\DUrole{default_value}{2}}, \sphinxparam{\DUrole{n,n}{regime}\DUrole{o,o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.synch_flux_density_approx}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{synch\_flux\_density\_approx}}}{\emph{\DUrole{n}{theta}}, \emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}wimp\textquotesingle{}}}, \emph{\DUrole{n}{ratio}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{n}{D0}\DUrole{o}{=}\DUrole{default_value}{3e+28}}, \emph{\DUrole{n}{delta}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}kol\textquotesingle{}}}, \emph{\DUrole{n}{B}\DUrole{o}{=}\DUrole{default_value}{2}}, \emph{\DUrole{n}{regime}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}B\textquotesingle{}}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Model\sphinxhyphen{}specific flux density from synchrotron radiation in the Regime “A”, “B” or “C” approximations
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{theta}} \textendash{} angular radius in arcmin
@@ -5882,7 +5588,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -5909,7 +5615,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -5932,7 +5638,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -5951,7 +5657,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -5963,7 +5669,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -5998,7 +5704,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 Flux density in µJy
 
@@ -6009,14 +5715,11 @@ Flux density in µJy
 \index{which\_N() (in module diffsph.pyflux)@\spxentry{which\_N()}\spxextra{in module diffsph.pyflux}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.which_N}}
-\pysigstartsignatures
-\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{which\_N}}}{\sphinxparam{\DUrole{n,n}{nu}}, \sphinxparam{\DUrole{n,n}{galaxy}}, \sphinxparam{\DUrole{n,n}{rad\_temp}}, \sphinxparam{\DUrole{n,n}{hyp}}, \sphinxparam{\DUrole{n,n}{ratio}}, \sphinxparam{\DUrole{n,n}{D0}}, \sphinxparam{\DUrole{n,n}{delta}}, \sphinxparam{\DUrole{n,n}{B}}, \sphinxparam{\DUrole{n,n}{manual}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{high\_res}\DUrole{o,o}{=}\DUrole{default_value}{False}}, \sphinxparam{\DUrole{n,n}{accuracy}\DUrole{o,o}{=}\DUrole{default_value}{1}}, \sphinxparam{\DUrole{o,o}{**}\DUrole{n,n}{kwargs}}}{}
-\pysigstopsignatures
+\phantomsection\label{\detokenize{diffsph:diffsph.pyflux.which_N}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{diffsph.pyflux.}}\sphinxbfcode{\sphinxupquote{which\_N}}}{\emph{\DUrole{n}{nu}}, \emph{\DUrole{n}{galaxy}}, \emph{\DUrole{n}{rad\_temp}}, \emph{\DUrole{n}{hyp}}, \emph{\DUrole{n}{ratio}}, \emph{\DUrole{n}{D0}}, \emph{\DUrole{n}{delta}}, \emph{\DUrole{n}{B}}, \emph{\DUrole{n}{manual}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{high\_res}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{accuracy}\DUrole{o}{=}\DUrole{default_value}{1}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
 \sphinxAtStartPar
 Determines at which order should the Fourier\sphinxhyphen{}expanded Green’s function solution be truncated and stores the associated \(s_n = h_n\times X_n\) coefficients as an array in the \sphinxcode{\sphinxupquote{/cache}} folder
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{nu}} \textendash{} frequency in GHz
@@ -6074,7 +5777,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{sv}} \textendash{} annihilation rate (annihilation cross section times relative velocity) \(\sigma v\) in cm \({}^3\)/s (default value = \(3 \times 10^{-26}\) cm \({}^3\) /s)
@@ -6101,7 +5804,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{width}} \textendash{} decay width of the DM particle in 1/s
@@ -6124,7 +5827,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{Gamma}} \textendash{} power\sphinxhyphen{}law exponent of the generic CRE source (\(1.1 < \Gamma < 3\))
@@ -6143,7 +5846,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}
+\item[{Parameters}] \leavevmode
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{ref}} \textendash{} reference used (\sphinxcode{\sphinxupquote{\textquotesingle{}Martinez\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1309.2641\textquotesingle{}}}, \sphinxcode{\sphinxupquote{\textquotesingle{}Geringer\sphinxhyphen{}Sameth\textquotesingle{}}} or \sphinxcode{\sphinxupquote{\textquotesingle{}1408.0002\textquotesingle{}}}, etc.)
 
@@ -6155,7 +5858,7 @@ Keyword arguments
 
 \end{itemize}
 \begin{quote}\begin{description}
-\sphinxlineitem{Parameters}\begin{itemize}
+\item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{rs}} \textendash{} scale radius in kpc
@@ -6190,7 +5893,7 @@ Keyword arguments
 
 \end{itemize}
 
-\sphinxlineitem{Returns}
+\item[{Returns}] \leavevmode
 \sphinxAtStartPar
 series truncation order \sphinxstyleemphasis{N}
 
