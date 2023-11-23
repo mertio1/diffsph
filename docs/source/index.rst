@@ -93,39 +93,42 @@ In this example, the ordering of the elements in the list ``dshp_list`` is not a
 ``limits`` module
 -----------------
 
-The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using the given noise level of a non-detection image of Draco. It takes (without parallelization) about one hour to compute all::
+The following example shows how to obtain limits on e.~g. the annnihilation rate of dark matter particles using the given noise level of a non-detection image of Draco. It takes (without parallelization) a few minutes to compute all::
 
     from diffsph import limits as lims
-    
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
     # DM mass grid in GeV 
-    
-    mass_grid = [100 * 10 ** (3 * i / 1000) for i in range(0,1000)]
-    
+
+    mass_grid = np.logspace(0,5,50)
+
     # List of decay channels
-    
-    ch_list = ['WW', 'ZZ', 'hh', 'nunu', 'mumu', 'tautau', 'qq', 'cc', 'bb', 'tt']
-    
+
+    ch_list = ['WW', 'ZZ', 'hh', 'nunu', 'mumu', 'tautau', 'qq', 'cc', 'bb', 'tt','ee']
+
     # diffsph's computations at nu = 150 MHz and for the given image
-    
-    rates = [[lims.decay_rate_limest(nu = .15, rms_noise = 100, beam_size = 20, 
-                                     galaxy = 'Draco', rad_temp = 'HDZ', mchi = mch, 
-                                     channel = ch, high_res = True, accuracy = .1, 
-                                     ref = '1408.0002') 
+
+    rates = [[lims.sigmav_limest(nu = .15, rms_noise = 100, beam_size = 20,
+                                     galaxy = 'Draco', rad_temp = 'HDZ', mchi = mch,
+                                     channel = ch, high_res = True, accuracy = .1,
+                                     ref = '1408.0002')
               for mch in mass_grid]
              for ch in ch_list]
-    
+
     # Plots
-    
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i], ls = '--') for i in range(0, 3)]
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i], ls = ':') for i in range(3, 6)]
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i]) for i in range(6, len(ch_list))]
-    plt.ylim([2e-24,8e-21]);
-    plt.xlim([200,1e5]);
-    plt.legend(loc = 'upper right', ncols = 5)
+
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i], ls = '--') for i in range(0, 3)]
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i], ls = ':') for i in range(3, 6)]
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i]) for i in range(6, len(ch_list))]
+    plt.ylim([1e-26,1e-18]);
+    plt.xlim([2,1e5]);
+    plt.legend(loc = 'lower right')
     plt.xlabel('$m_\chi$ (GeV)', size = 'large');
-    plt.ylabel('$\Gamma_{dec}$ (s${}^{-1}$)', size = 'large');
-    plt.title('diffsph 2$\sigma$ limit estimates on DM decay rates');
-    plt.text(8e4, 4e-24, 'Draco', horizontalalignment = 'right', size = 'large');
+    plt.ylabel(r'$\langle \sigma v \rangle$ [cm$^3$/s]', size = 'large');
+    plt.title('diffsph 2$\sigma$ limit estimates on DM annihilation rates');
+    plt.text(8, 2e-19, 'Draco', horizontalalignment = 'right', size = 'large');
 
 .. image:: example_limits.png
    :width: 1000

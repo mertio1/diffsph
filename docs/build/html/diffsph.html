@@ -84,6 +84,7 @@
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>a_fit</strong> – fitted gaussian amplitude in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
 <li><p><strong>sigma_fit</strong> – width parameter of the Gaussian template in arcmin</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>D0</strong> – magnitude of the diffusion coefficient for a 1 GeV CRE in cm <span class="math notranslate nohighlight">\({}^2\)</span>/s (default value = <span class="math notranslate nohighlight">\(3\times 10^{28}\)</span> cm <span class="math notranslate nohighlight">\({}^2\)</span> /s)</p></li>
@@ -93,9 +94,6 @@
 <li><p><strong>channel</strong> (<em>str</em>) – decay channel: <span class="math notranslate nohighlight">\(b\bar b\)</span> (<code class="docutils literal notranslate"><span class="pre">'bb'</span></code>), <span class="math notranslate nohighlight">\(\mu^+ \mu^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'mumu'</span></code>), <span class="math notranslate nohighlight">\(W^+ W^-\)</span> (<code class="docutils literal notranslate"><span class="pre">'WW'</span></code>), etc.</p></li>
 <li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
@@ -140,6 +138,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>rms_noise</strong> – RMS noise level of the observation in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>ratio</strong> – ratio between the diffusion halo and half-light radii</p></li>
@@ -152,9 +151,6 @@
 <li><p><strong>high_res</strong> (<em>bool</em>) – spatial resolution. If <code class="docutils literal notranslate"><span class="pre">'True'</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">synch_emissivity()</span></code> computes as many terms as needed in order to converge at <span class="math notranslate nohighlight">\(r=0\)</span>. (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 <li><p><strong>accuracy</strong> – theoretical accuracy in % (default value = 1%)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
@@ -202,6 +198,7 @@
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>a_fit</strong> – fitted gaussian amplitude in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
 <li><p><strong>sigma_fit</strong> – width parameter of the Gaussian template in arcmin</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>D0</strong> – magnitude of the diffusion coefficient for a 1 GeV CRE in cm <span class="math notranslate nohighlight">\({}^2\)</span>/s (default value = <span class="math notranslate nohighlight">\(3\times 10^{28}\)</span> cm <span class="math notranslate nohighlight">\({}^2\)</span> /s)</p></li>
@@ -210,9 +207,6 @@
 <li><p><strong>Gamma</strong> – power-law exponent of the generic CRE source (<span class="math notranslate nohighlight">\(1.1 &lt; \Gamma &lt; 3\)</span>, default value = 2)</p></li>
 <li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
@@ -252,6 +246,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>rms_noise</strong> – RMS noise level of the observation in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>ratio</strong> – ratio between the diffusion halo and half-light radii</p></li>
@@ -263,9 +258,6 @@
 <li><p><strong>high_res</strong> (<em>bool</em>) – spatial resolution. If <code class="docutils literal notranslate"><span class="pre">'True'</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">synch_emissivity()</span></code> computes as many terms as needed in order to converge at <span class="math notranslate nohighlight">\(r=0\)</span>. (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 <li><p><strong>accuracy</strong> – theoretical accuracy in % (default value = 1%)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
@@ -308,6 +300,7 @@
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>a_fit</strong> – fitted gaussian amplitude in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
 <li><p><strong>sigma_fit</strong> – width parameter of the Gaussian template in arcmin</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>D0</strong> – magnitude of the diffusion coefficient for a 1 GeV CRE in cm <span class="math notranslate nohighlight">\({}^2\)</span>/s (default value = <span class="math notranslate nohighlight">\(3\times 10^{28}\)</span> cm <span class="math notranslate nohighlight">\({}^2\)</span> /s)</p></li>
@@ -318,9 +311,6 @@
 <li><p><strong>self_conjugate</strong> – if set <code class="docutils literal notranslate"><span class="pre">'True'</span></code> (default value) the DM particle is its own antiparticle</p></li>
 <li><p><strong>manual</strong> (<em>bool</em>) – manual input of parameter values in rad_temp (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
@@ -364,6 +354,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nu</strong> – frequency in GHz</p></li>
 <li><p><strong>rms_noise</strong> – RMS noise level of the observation in <span class="math notranslate nohighlight">\(\mu\)</span> Jy / beam</p></li>
+<li><p><strong>beam_size</strong> – beam size in arcseconds</p></li>
 <li><p><strong>galaxy</strong> (<em>str</em>) – name of the galaxy</p></li>
 <li><p><strong>rad_temp</strong> (<em>str</em>) – dark matter halo model (<code class="docutils literal notranslate"><span class="pre">'NFW'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Einasto'</span></code>, etc.)</p></li>
 <li><p><strong>ratio</strong> – ratio between the diffusion halo and half-light radii</p></li>
@@ -377,9 +368,6 @@
 <li><p><strong>high_res</strong> (<em>bool</em>) – spatial resolution. If <code class="docutils literal notranslate"><span class="pre">'True'</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">synch_emissivity()</span></code> computes as many terms as needed in order to converge at <span class="math notranslate nohighlight">\(r=0\)</span>. (default value = <code class="docutils literal notranslate"><span class="pre">'False'</span></code>)</p></li>
 <li><p><strong>accuracy</strong> – theoretical accuracy in % (default value = 1%)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Beam_size</dt>
-<dd class="field-even"><p>beam size in arcseconds</p>
 </dd>
 </dl>
 <p>Keyword arguments</p>
