@@ -8,9 +8,12 @@
     <title>diffsph.utils package &#8212; diffsph 1.0.0. documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -80,6 +83,20 @@
 <div class="math notranslate nohighlight">
 \[\mathcal H_n(r_h,R) \simeq 4\pi\int_0^{r_h}dr\, r^2 \frac{\sin\left(\frac{n\pi r}{r_h}\right)}r \ ,\]</div>
 <p>where <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(rh\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are, respectively the distance, halo radius and Fourier index</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffsph.utils.tools.check_cache">
+<span class="sig-prename descclassname"><span class="pre">diffsph.utils.tools.</span></span><span class="sig-name descname"><span class="pre">check_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.utils.tools.check_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks whether the /.diffsph_cache/ folder exists. If it does not exists, it creates it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>folder directory name</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -239,12 +256,28 @@
 <dt class="sig sig-object py" id="diffsph.utils.tools.load_data">
 <span class="sig-prename descclassname"><span class="pre">diffsph.utils.tools.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.utils.tools.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function loads data from folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>data organized in form of a python dictionary</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="diffsph.utils.tools.sort_kwargs">
 <span class="sig-prename descclassname"><span class="pre">diffsph.utils.tools.</span></span><span class="sig-name descname"><span class="pre">sort_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffsph.utils.tools.sort_kwargs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function sorts keyword arguments alphabetically</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sorted keywords with corresponding entries</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

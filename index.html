@@ -8,9 +8,12 @@
     <title>Documentation page for diffsph &#8212; diffsph 1.0.0. documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -33,7 +36,6 @@
             
   <section id="documentation-page-for-diffsph">
 <h1>Documentation page for <code class="docutils literal notranslate"><span class="pre">diffsph</span></code><a class="headerlink" href="#documentation-page-for-diffsph" title="Permalink to this heading">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">diffsph</span></code> is a Python package that computes diffuse signals (e.g. brightness) emitted by Milky-Way satellite dwarf spheroidal galaxies. The underlining physics is mostly based on <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -50,15 +52,62 @@
 </li>
 </ul>
 </div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">diffsph</span></code> is a Python package that computes diffuse fluxes from Milky-Way satellite dwarf spheroidal (<em>dSph</em>) galaxies. It allows user to obtain</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(J\)</span> factor maps (relevant for gamma-ray astronomy)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/promptcolor.png"><img alt="_images/promptcolor.png" class="align-center" src="_images/promptcolor.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>(radio frequency) synchtrotron-radiation emission profiles</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/synchcolor.png"><img alt="_images/synchcolor.png" class="align-center" src="_images/synchcolor.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>bounds on e.~g. Dark Matter annihilation cross sections from radio astronomical observations</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/svlimits.png"><img alt="_images/svlimits.png" class="align-center" src="_images/svlimits.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+<p>Use Git or checkout with SVN using the web URL <a class="reference external" href="https://github.com/mertio1/diffsph.git">https://github.com/mertio1/diffsph.git</a> , e. g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mertio1</span><span class="o">/</span><span class="n">diffsph</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">svn</span> <span class="n">co</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mertio1</span><span class="o">/</span><span class="n">diffsph</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Otherwise download the zip file from the repository <a class="reference external" href="https://github.com/mertio1/diffsph">https://github.com/mertio1/diffsph</a></p>
+<p>For global installations, while in the <code class="docutils literal notranslate"><span class="pre">diffsph</span></code>’s main folder type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">bdist_wheel</span>
+</pre></div>
+</div>
+<p>and:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="architecture">
 <h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading">¶</a></h1>
-<p>The code’s structure can be summarized as follows:</p>
-<a class="reference internal image-reference" href="_images/flowchart.png"><img alt="_images/flowchart.png" src="_images/flowchart.png" style="width: 1000px;" /></a>
-<p>Besides being able to compute fluxes with the <code class="docutils literal notranslate"><span class="pre">pyflux</span></code> (<a class="reference internal" href="diffsph.html#module-diffsph.pyflux" title="diffsph.pyflux"><code class="xref py py-mod docutils literal notranslate"><span class="pre">diffsph.pyflux</span></code></a>) module, the <code class="docutils literal notranslate"><span class="pre">limits</span></code> (<a class="reference internal" href="diffsph.html#module-diffsph.limits" title="diffsph.limits"><code class="xref py py-mod docutils literal notranslate"><span class="pre">diffsph.limits</span></code></a>) module enables users to produce 2<span class="math notranslate nohighlight">\(\sigma\)</span> limits on e.~g. annihilation cross sections or decay rates of dark matter particles.</p>
+<p>The main functionalities and algorithmic structure of the code are captured by the diagram below</p>
+<a class="reference internal image-reference" href="_images/mindmap_diffsph.png"><img alt="_images/mindmap_diffsph.png" class="align-center" src="_images/mindmap_diffsph.png" style="width: 800px;" /></a>
+<p>Users can both compute diffuse emission <em>fluxes</em> with the <code class="docutils literal notranslate"><span class="pre">pyflux</span></code> (<a class="reference internal" href="diffsph.html#module-diffsph.pyflux" title="diffsph.pyflux"><code class="xref py py-mod docutils literal notranslate"><span class="pre">diffsph.pyflux</span></code></a>) module and 2<span class="math notranslate nohighlight">\(\sigma\)</span> <em>limits</em> on e. g. annihilation cross sections or decay rates of dark matter particles by using the <code class="docutils literal notranslate"><span class="pre">limits</span></code> (<a class="reference internal" href="diffsph.html#module-diffsph.limits" title="diffsph.limits"><code class="xref py py-mod docutils literal notranslate"><span class="pre">diffsph.limits</span></code></a>) module. Details about the methods used to perform these computations are given in Ref. <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> .</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -67,14 +116,14 @@
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h1>
 <section id="pyflux-module">
 <h2><code class="docutils literal notranslate"><span class="pre">pyflux</span></code> module<a class="headerlink" href="#pyflux-module" title="Permalink to this heading">¶</a></h2>
-<p>In order to get familiar with the code, the user can use the following set of commands in order to generate the figure below:</p>
+<p>In order to get familiar with the code, use the following set of commands to generate the figure below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diffsph</span> <span class="kn">import</span> <span class="n">pyflux</span> <span class="k">as</span> <span class="n">pf</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 
 <span class="c1"># Angle grid in arcmin</span>
 
-<span class="n">theta_grid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">1000</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+<span class="n">theta_grid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">50</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
 
 <span class="c1"># List of satellite galaxies</span>
 
@@ -103,36 +152,22 @@
          <span class="n">horizontalalignment</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/example_pyflux.png"><img alt="_images/example_pyflux.png" src="_images/example_pyflux.png" style="width: 1000px;" /></a>
-<p>In this example, the ordering of the elements in the list <code class="docutils literal notranslate"><span class="pre">dshp_list</span></code> is not arbitrary. It was deliberately chosen in such a way that the total flux density of the first element is the largest while the rest are sorted in decreasing order. The following command line allows one to assess this quantitatively:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Total flux density for each galaxy in mJy</span>
-<span class="n">Snu</span> <span class="o">=</span> <span class="p">[[</span><span class="n">gal</span><span class="p">,</span> <span class="mf">1e-3</span> <span class="o">*</span> <span class="n">pf</span><span class="o">.</span><span class="n">synch_flux_density</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">nu</span> <span class="o">=</span> <span class="mf">.150</span><span class="p">,</span> <span class="n">galaxy</span> <span class="o">=</span> <span class="n">gal</span><span class="p">,</span>
-                                          <span class="n">rad_temp</span> <span class="o">=</span> <span class="s1">&#39;HDZ&#39;</span><span class="p">,</span> <span class="n">hyp</span> <span class="o">=</span> <span class="s1">&#39;wimp&#39;</span><span class="p">,</span>
-                                          <span class="n">ref</span> <span class="o">=</span> <span class="s1">&#39;1408.0002&#39;</span><span class="p">,</span> <span class="n">sv</span> <span class="o">=</span> <span class="mf">3e-26</span><span class="p">,</span>
-                                          <span class="n">mchi</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="s1">&#39;mumu&#39;</span><span class="p">,</span>
-                                          <span class="n">high_res</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">accuracy</span> <span class="o">=</span> <span class="mf">.1</span><span class="p">)]</span>
-            <span class="k">for</span> <span class="n">gal</span> <span class="ow">in</span> <span class="n">dsph_list</span><span class="p">]</span>
-
-<span class="c1"># Print</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Snu</span><span class="p">)</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="s1">&#39;Ursa Major II&#39;</span><span class="p">,</span> <span class="mf">5.205501952938485</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Fornax&#39;</span><span class="p">,</span> <span class="mf">3.2288461400011492</span><span class="p">],</span>
-<span class="p">[</span><span class="s1">&#39;Ursa Minor&#39;</span><span class="p">,</span> <span class="mf">2.8903428197065293</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Sextans&#39;</span><span class="p">,</span> <span class="mf">1.6467270289999836</span><span class="p">]]</span>
-</pre></div>
-</div>
+<a class="reference internal image-reference" href="_images/example_pyflux.png"><img alt="_images/example_pyflux.png" class="align-center" src="_images/example_pyflux.png" style="width: 600px;" /></a>
 </section>
 <section id="limits-module">
 <h2><code class="docutils literal notranslate"><span class="pre">limits</span></code> module<a class="headerlink" href="#limits-module" title="Permalink to this heading">¶</a></h2>
-<p>The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using the given noise level of a non-detection image of Draco. It takes (without parallelization) about one hour to compute all:</p>
+<p>The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using non-detection (noise level) in the field of Draco. It can take just a few minutes to compute them all in a modern laptop:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diffsph</span> <span class="kn">import</span> <span class="n">limits</span> <span class="k">as</span> <span class="n">lims</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 
 <span class="c1"># DM mass grid in GeV</span>
 
-<span class="n">mass_grid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+<span class="n">mass_grid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">50</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
 
 <span class="c1"># List of decay channels</span>
 
-<span class="n">ch_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;WW&#39;</span><span class="p">,</span> <span class="s1">&#39;ZZ&#39;</span><span class="p">,</span> <span class="s1">&#39;hh&#39;</span><span class="p">,</span> <span class="s1">&#39;nunu&#39;</span><span class="p">,</span> <span class="s1">&#39;mumu&#39;</span><span class="p">,</span> <span class="s1">&#39;tautau&#39;</span><span class="p">,</span> <span class="s1">&#39;qq&#39;</span><span class="p">,</span> <span class="s1">&#39;cc&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;tt&#39;</span><span class="p">]</span>
+<span class="n">ch_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;WW&#39;</span><span class="p">,</span> <span class="s1">&#39;ZZ&#39;</span><span class="p">,</span> <span class="s1">&#39;hh&#39;</span><span class="p">,</span> <span class="s1">&#39;nunu&#39;</span><span class="p">,</span> <span class="s1">&#39;ee_MC&#39;</span><span class="p">,</span> <span class="s1">&#39;mumu&#39;</span><span class="p">,</span> <span class="s1">&#39;tautau&#39;</span><span class="p">,</span> <span class="s1">&#39;qq&#39;</span><span class="p">,</span> <span class="s1">&#39;cc&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;tt&#39;</span><span class="p">]</span>
 
 <span class="c1"># diffsph&#39;s computations at nu = 150 MHz and for the given image</span>
 
@@ -145,28 +180,19 @@
 
 <span class="c1"># Plots</span>
 
-<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates_Draco</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
-<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates_Draco</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
-<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates_Draco</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch_list</span><span class="p">))]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">2e-24</span><span class="p">,</span><span class="mf">8e-21</span><span class="p">]);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span><span class="mf">1e5</span><span class="p">]);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">mass_grid</span><span class="p">,</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch_list</span><span class="p">))]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">1e-25</span><span class="p">,</span> <span class="mf">1e-20</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;lower right&#39;</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$m_\chi$ (GeV)&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$\Gamma_</span><span class="si">{dec}</span><span class="s1">$ (s$</span><span class="si">{}</span><span class="s1">^{-1}$)&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;diffsph 2$\sigma$ limit estimates on DM decay rates&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">8e4</span><span class="p">,</span> <span class="mf">4e-24</span><span class="p">,</span> <span class="s1">&#39;Draco&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">4e-21</span><span class="p">,</span> <span class="s1">&#39;Draco&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/example_limits.png"><img alt="_images/example_limits.png" src="_images/example_limits.png" style="width: 1000px;" /></a>
-</section>
-</section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+<a class="reference internal image-reference" href="_images/example_limits.png"><img alt="_images/example_limits.png" class="align-center" src="_images/example_limits.png" style="width: 600px;" /></a>
 <p class="rubric">References</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="doc-footnote">
@@ -176,6 +202,7 @@ doi:<a class="reference external" href="https://iopscience.iop.org/article/10.10
 [arXiv:<a class="reference external" href="https://arxiv.org/abs/2011.11947">2011.11947 [astro-ph.HE]</a>].</p>
 </aside>
 </aside>
+</section>
 </section>
 
 

@@ -6,25 +6,76 @@
 Documentation page for ``diffsph``
 ==================================
 
-``diffsph`` is a Python package that computes diffuse signals (e.g. brightness) emitted by Milky-Way satellite dwarf spheroidal galaxies. The underlining physics is mostly based on [#]_.
-
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
    
    modules
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+|
+
+``diffsph`` is a Python package that computes diffuse fluxes from Milky-Way satellite dwarf spheroidal (*dSph*) galaxies. It allows user to obtain
+
+* :math:`J` factor maps (relevant for gamma-ray astronomy)
+ 
+.. image:: figs/promptcolor.png
+   :width: 600
+   :align: center
+   
+* (radio frequency) synchtrotron-radiation emission profiles 
+
+.. image:: figs/synchcolor.png
+   :width: 600
+   :align: center
+
+* bounds on e.~g. Dark Matter annihilation cross sections from radio astronomical observations
+
+.. image:: figs/svlimits.png
+   :width: 400
+   :align: center
+
+|
+
+Installation
+============
+
+Use Git or checkout with SVN using the web URL https://github.com/mertio1/diffsph.git , e. g.::
+    
+    git clone https://github.com/mertio1/diffsph.git
+    
+or::
+
+    svn co https://github.com/mertio1/diffsph.git
+    
+Otherwise download the zip file from the repository https://github.com/mertio1/diffsph
+
+For global installations, while in the ``diffsph``'s main folder type::
+    
+    python setup.py bdist_wheel
+    
+and::
+
+    pip install .
+
 |
 
 Architecture
 ============
 
-The code's structure can be summarized as follows: 
+The main functionalities and algorithmic structure of the code are captured by the diagram below   
 
-.. image:: flowchart.png
-   :width: 1000
+.. image:: figs/mindmap_diffsph.png
+   :width: 800
+   :align: center
 
-Besides being able to compute fluxes with the ``pyflux`` (:py:mod:`diffsph.pyflux`) module, the ``limits`` (:py:mod:`diffsph.limits`) module enables users to produce 2\ :math:`\sigma` limits on e.~g. annihilation cross sections or decay rates of dark matter particles.
+Users can both compute diffuse emission *fluxes* with the ``pyflux`` (:py:mod:`diffsph.pyflux`) module and 2\ :math:`\sigma` *limits* on e. g. annihilation cross sections or decay rates of dark matter particles by using the ``limits`` (:py:mod:`diffsph.limits`) module. Details about the methods used to perform these computations are given in Ref. [#]_ . 
 
 |
 
@@ -34,7 +85,7 @@ Examples
 ``pyflux`` module
 -----------------
 
-In order to get familiar with the code, the user can use the following set of commands in order to generate the figure below::
+In order to get familiar with the code, use the following set of commands to generate the figure below::
 
     from diffsph import pyflux as pf
     import matplotlib.pyplot as plt
@@ -42,7 +93,7 @@ In order to get familiar with the code, the user can use the following set of co
     
     # Angle grid in arcmin 
     
-    theta_grid = [15 * i / 1000 for i in range(0,1000)]
+    theta_grid = [15 * i / 50 for i in range(0, 50)]
     
     # List of satellite galaxies
     
@@ -70,10 +121,12 @@ In order to get familiar with the code, the user can use the following set of co
     plt.text(7.5, 630, '$\chi\chi\, \\to\, \mu^+\mu^-$', 
              horizontalalignment = 'center', size = 'large');
 
-.. image:: example_pyflux.png
-   :width: 1000
+.. image:: figs/example_pyflux.png
+   :width: 600
+   :align: center
    
-In this example, the ordering of the elements in the list ``dshp_list`` is not arbitrary. It was deliberately chosen in such a way that the total flux density of the first element is the largest while the rest are sorted in decreasing order. The following command line allows one to assess this quantitatively::
+
+.. In this example, the ordering of the elements in the list ``dshp_list`` is not arbitrary. It was deliberately chosen in such a way that the total flux density of the first element is the largest while the rest are sorted in decreasing order. The following command line allows one to assess this quantitatively::
 
     # Total flux density for each galaxy in mJy
     Snu = [[gal, 1e-3 * pf.synch_flux_density(30, nu = .150, galaxy = gal, 
@@ -85,25 +138,26 @@ In this example, the ordering of the elements in the list ``dshp_list`` is not a
                 
     # Print
     print(Snu)
-    
+
     >>> [['Ursa Major II', 5.205501952938485], ['Fornax', 3.2288461400011492], 
     ['Ursa Minor', 2.8903428197065293], ['Sextans', 1.6467270289999836]]
-
 
 ``limits`` module
 -----------------
 
-The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using the given noise level of a non-detection image of Draco. It takes (without parallelization) about one hour to compute all::
+The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using non-detection (noise level) in the field of Draco. It can take just a few minutes to compute them all in a modern laptop::
 
     from diffsph import limits as lims
+    import matplotlib.pyplot as plt
+    %matplotlib inline    
     
     # DM mass grid in GeV 
     
-    mass_grid = [100 * 10 ** (3 * i / 1000) for i in range(0,1000)]
+    mass_grid = [10 ** (5 * i / 50) for i in range(0, 50)]
     
     # List of decay channels
     
-    ch_list = ['WW', 'ZZ', 'hh', 'nunu', 'mumu', 'tautau', 'qq', 'cc', 'bb', 'tt']
+    ch_list = ['WW', 'ZZ', 'hh', 'nunu', 'ee_MC', 'mumu', 'tautau', 'qq', 'cc', 'bb', 'tt']
     
     # diffsph's computations at nu = 150 MHz and for the given image
     
@@ -116,26 +170,20 @@ The following example shows how to obtain limits on e.~g. the decay rate of dark
     
     # Plots
     
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i], ls = '--') for i in range(0, 3)]
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i], ls = ':') for i in range(3, 6)]
-    [plt.loglog(mass_grid, rates_Draco[i], label = ch_list[i]) for i in range(6, len(ch_list))]
-    plt.ylim([2e-24,8e-21]);
-    plt.xlim([200,1e5]);
-    plt.legend(loc = 'upper right', ncols = 5)
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i], ls = '--') for i in range(0, 3)]
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i], ls = ':') for i in range(3, 7)]
+    [plt.loglog(mass_grid, rates[i], label = ch_list[i]) for i in range(7, len(ch_list))]
+    plt.ylim([1e-25, 1e-20]);
+    plt.xlim([3, 1e5]);
+    plt.legend(loc = 'lower right', ncols = 2)
     plt.xlabel('$m_\chi$ (GeV)', size = 'large');
     plt.ylabel('$\Gamma_{dec}$ (s${}^{-1}$)', size = 'large');
     plt.title('diffsph 2$\sigma$ limit estimates on DM decay rates');
-    plt.text(8e4, 4e-24, 'Draco', horizontalalignment = 'right', size = 'large');
+    plt.text(5, 4e-21, 'Draco', size = 'large');
 
-.. image:: example_limits.png
-   :width: 1000
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. image:: figs/example_limits.png
+   :width: 600
+   :align: center
 
 .. rubric:: References
 
