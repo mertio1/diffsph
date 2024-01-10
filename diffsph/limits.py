@@ -415,4 +415,3 @@ def generic_rate_limest(nu, rms_noise, beam_size, galaxy, rad_temp, ratio = 1, D
         Gamma = Gamma, rate = 1, **rargs
     ) / np.sqrt( Nbeams)
     
-    

@@ -60,6 +60,7 @@ delta_to_float = {
 #  #######################################################################
 
 ch_to_grid = {
+    "ee_MC": "lmgen1",
     "mumu": "lmgen1",
     "tautau": "lmgen1",
     "qq": "lmgen",

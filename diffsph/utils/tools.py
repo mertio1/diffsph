@@ -14,9 +14,24 @@ from diffsph.utils.consts import *
 
 #  #######################################################################
 
+def check_cache():
+    '''
+    Function checks whether the /.diffsph_cache/ folder exists. If it does not exists, it creates it
+    
+    :return: folder directory name
+    :rtype: str
+    '''
+    DEFAULT_CACHE_DIR = os.path.expanduser("~/.diffsph_cache")
+    if not os.path.exists(DEFAULT_CACHE_DIR):
+        os.makedirs(DEFAULT_CACHE_DIR)
+    return DEFAULT_CACHE_DIR
+
 def load_data(folder):
     '''
     Function loads data from folder
+    
+    :return: data organized in form of a python dictionary 
+    :rtype: dict
     '''
     data = {}
     for dirpath, dirnames, filenames in os.walk(folder):
@@ -59,6 +74,9 @@ def var_to_str(inp):
 def sort_kwargs(**kwargs):
     """
     Function sorts keyword arguments alphabetically
+    
+    :return: sorted keywords with corresponding entries
+    :rtype: dict
     """
     kwkeys = list(kwargs.keys())
     kwkeys.sort()

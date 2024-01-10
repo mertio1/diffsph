@@ -9,7 +9,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # foo = pd.read_csv('./galaxies/foo.csv', index_col='Name') # Other Ref. / Halo model 
 
 tab0 = pd.read_csv(os.path.join(dir_path, 'data/sat_dsphs.csv')).drop(columns = 'arXiv')
-tab1 = pd.read_csv(os.path.join(dir_path, 'data/DMhalos_dsphs_NEW.csv'))
+tab1 = pd.read_csv(os.path.join(dir_path, 'data/DMhalos_dsphs.csv'))
 
 gen_data = tab0.set_index('Name')
 dm_data = pd.merge(tab0, tab1, on = ['Name','Abbr']).set_index(['Name','Halo Model', 'arXiv'])

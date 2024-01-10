@@ -11,8 +11,8 @@ from diffsph.utils.dictionaries import *
 from diffsph.utils.tools import *
 from diffsph.utils.consts import *
 
-cache = load_data('pscache')
-cache_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../pscache'))
+cache_path = check_cache()
+cache = load_data(cache_path)
 
 # ######################### ################# ######################### 
 # ######################### Exact Predictions ######################### 
@@ -79,8 +79,6 @@ def synch_emissivity(r, nu, galaxy, rad_temp, hyp = 'wimp', ratio = 1, D0 = 3e28
     '''
     if var_to_str(galaxy) not in gen_data.index:
         raise KeyError('Galaxy not found. Please check your spelling or use the function add_dwarf to add new data.')
-    if not os.path.exists("pscache"):
-        os.mkdir("pscache")
 
     rkeys = kwargs.keys() - ( kwargs.keys() & {'self_conjugate', 'sv', 'width', 'rate'} )
     rkwargs = {rk: kwargs[rk] for rk in rkeys}   
@@ -181,8 +179,6 @@ def synch_brightness(theta, nu, galaxy, rad_temp, hyp = 'wimp', ratio = 1, D0 = 
     '''    
     if var_to_str(galaxy) not in gen_data.index:
         raise KeyError('Galaxy not found. Please check your spelling or use the function add_dwarf to add new data.')
-    if not os.path.exists("pscache"):
-        os.mkdir("pscache")
 
     rkeys = kwargs.keys() - ( kwargs.keys() & {'self_conjugate', 'sv', 'width', 'rate'} )
     rkwargs = {rk: kwargs[rk] for rk in rkeys}   
@@ -344,8 +340,6 @@ def synch_flux_density(theta, nu, galaxy, rad_temp, hyp = 'wimp', ratio = 1, D0 
     '''
     if var_to_str(galaxy) not in gen_data.index:
         raise KeyError('Galaxy not found. Please check your spelling or use the function add_dwarf to add new data.')
-    if not os.path.exists("pscache"):
-        os.mkdir("pscache")
     
     rkeys = kwargs.keys() - ( kwargs.keys() & {'self_conjugate', 'sv', 'width', 'rate'} )
     rkwargs = {rk: kwargs[rk] for rk in rkeys}   
@@ -843,10 +837,6 @@ def which_N(nu, galaxy, rad_temp, hyp, ratio, D0, delta, B, manual = False, high
     arg_str = str([nu, var_to_str(galaxy), var_to_str(rad_temp), var_to_str(hyp), ratio, D0, var_to_str(delta), B, manual, high_res, accuracy, sort_kwargs(**kwargs)])
     
     filename = hashlib.sha256(arg_str.encode()).hexdigest() + ".csv"
-
-    # Create the data directory if it doesn't exist
-    if not os.path.exists("pscache"):
-        os.mkdir("pscache")
     
     # Initiate loop          
     m = 1
@@ -879,10 +869,160 @@ def which_N(nu, galaxy, rad_temp, hyp, ratio, D0, delta, B, manual = False, high
         slist.append(coeff(m + 1, nu, galaxy, rad_temp, hyp, ratio, D0, delta, B, manual, **kwargs) )
 
     # Save file once the desired accuracy is achieved     
-    with open(os.path.join("pscache", filename), mode = 'w', newline = '') as file:
+    with open(os.path.join(cache_path, filename), mode = 'w', newline = '') as file:
         writer = csv.writer(file)
         for row in slist:
             writer.writerow([row])
     return m
 
 
+# ########################### Classes (for v2)
+
+
+def RA_rad(galaxy):
+    return 2 * np.pi * (
+        float(gen_data['R.A. (J2000)'][galaxy][:2]) + (
+            float(gen_data['R.A. (J2000)'][galaxy][3:5]) + float(gen_data['R.A. (J2000)'][galaxy][6:]) / 60 
+        ) / 60 
+    ) / 24
+
+def Dec_rad(galaxy):
+    return np.pi * float(gen_data['Decl. (J2000)'][galaxy][0] + '1') * (
+        float(gen_data['Decl. (J2000)'][galaxy][1:3]) + (
+            float(gen_data['Decl. (J2000)'][galaxy][4:6]) + float(gen_data['Decl. (J2000)'][galaxy][7:]) / 60 
+        ) / 60 
+    ) / 180
+
+class transport:
+    def __init__(self, rh = None, B = None, D0 = None, tau0 = None, delta = None):
+        if rh:
+            self._rh = rh
+            if (D0 is not None) and (tau0 is not None):
+                raise Exception('ERROR: rh, D0 and tau0 are interdependent. Cannot set them all at the same time.')
+            elif D0:
+                D0_conv = D0 * cm_to_kpc **2 * Gyr_to_sec
+                self._D0 = D0
+                self._tau0 = self.rh ** 2 / D0_conv
+            elif tau0:
+                tau0sec = tau0 * Gyr_to_sec
+                rhcm = rh / cm_to_kpc
+                self._tau0 = tau0
+                self._D0 = rhcm ** 2 / tau0sec
+        elif rh is None:
+            if (D0 is not None) and (tau0 is not None):
+                tau0sec = tau0
+                D0_conv = D0 * cm_to_kpc **2 * Gyr_to_sec
+        
+                self._D0 = D0
+                self._tau0 = tau0
+                self._rh = np.sqrt(tau0sec * D0_conv)
+        self.B = B
+        self.delta = delta
+            
+        
+    @property
+    def D0(self):
+        return self._D0
+    
+    @property
+    def tau0(self):
+        return self._tau0
+    
+    @property
+    def rh(self):
+        return self._rh
+
+    @D0.setter
+    def D0(self, value):
+        self._D0 = value
+        
+    @tau0.setter
+    def tau0(self, value):
+        self._tau0 = value
+    
+    @rh.setter
+    def rh(self, value):
+        self._rh = value
+
+# Functions
+
+    def Elosses(self,E):
+        """
+        Total energy loss function in GeV/s
+    
+        :param E: cosmic-ray energy in GeV
+        :param B: magnitude of the magnetic field’s smooth component in :math:`\\mu`\G
+    
+        :return: energy-loss rate in GeV/s
+        """
+        return b0 * (1 + (self.B / Bc)**2) * E**2
+    
+    def Dcoeff(self, E):
+        """
+        Diffusion coefficient in cm :math:`{}^2` /s
+    
+        :param E: cosmic-ray energy in GeV
+        :param delta: power-law exponent of the diffusion coefficient as a function of the CRE's energy (default value = 1/3 or ``'kol'``)
+    
+        :return: Diffusion coefficient for CRE with energy :math:`E` (GeV) in cm :math:`{}^2` /s
+        """
+        return self.D0 * E ** delta_float(self.delta)
+    
+    def Syrovatskii_var(self, E):
+        """
+        Syrovatskii variable in kpc\ :sup:`2`
+    
+        :param E: cosmic-ray energy in GeV
+        :param B: magnitude of the magnetic field’s smooth component in :math:`\\mu`\G
+        :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm\ :sup:`2`/s
+        :param delta: power-law exponent of the diffusion coefficient as a function of the CRE’s energy (default value = 1/3) 
+    
+        :return: Syrovatskii variable in kpc\ :sup:`2`
+        """
+        _delta = delta_float(self.delta)
+        return self.D0 / b0 / (1 + (self.B / Bc)**2) / (1 - _delta) / E**(1 - _delta) * cm_to_kpc**2
+    
+    def eta_var(self, E):
+        """
+        :math:`\\eta` variable as a function of the CRE's energy, magnetic field, tau and delta parameters 
+    
+        :param E: CRE energy in GeV
+        :param B: magnetic field strength in µG
+        :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm\ :sup:`2`/s
+        :param delta: power-law exponent of the diffusion coefficient as a function of the CRE’s energy
+    
+        :return: :math:`\\eta` variable
+        """
+        return np.pi ** 2 * self.Syrovatskii_var(E) / self.rh ** 2
+    
+    
+    def hatXne(self, E, E0):
+        """
+        CRE number-density function kernel in s/GeV :math:`\\hat X_n`
+
+        :param E: CRE energy in GeV
+        :param E0: injected CRE's energy in GeV
+        :param B: magnetic field strength in µG
+        :param D0: magnitude of the diffusion coefficient for a 1 GeV CRE in cm\ :sup:`2`/s
+        :param delta: power-law exponent of the diffusion coefficient as a function of the CRE’s energy
+            
+        :return: Electron number density kernel in s/GeV 
+        """
+        if E > E0:
+            return 0
+        return 2 * np.exp(-(self.eta_var(E) - self.eta_var(E0))) / self.Elosses(E)
+    
+    def _Elosses_ics(self,E):
+        return b0 * E**2
+    def _Elosses_synchrotron(self,E):
+        return b0 * (self.B / Bc)**2 * E**2
+
+    def _timescale_losses(self,E):
+        return E / self.Elosses(E) / Gyr_to_sec
+    def _timescale_diffusion(self,E):
+        return self.rh ** 2 / self.Dcoeff(E) / cm_to_kpc**2 / Gyr_to_sec
+
+    def _timescale_ics(self,E):
+        return E / self._Elosses_ics(E) / Gyr_to_sec
+    def _timescale_synchrotron(self,E):
+        return E / self._Elosses_synchrotron(E) / Gyr_to_sec
