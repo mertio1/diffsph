@@ -1,0 +1,11 @@
+include diffsph/spectra/Interpolations/input/*.csv
+include diffsph/spectra/Interpolations/input/lm/*.csv
+include diffsph/spectra/Interpolations/delta/sixth/synrad/*.csv
+include diffsph/spectra/Interpolations/delta/sixth/synrad/sxdm/*.csv
+include diffsph/spectra/Interpolations/delta/kol/synrad/*.csv
+include diffsph/spectra/Interpolations/delta/kol/synrad/koldm/*.csv
+include diffsph/spectra/Interpolations/delta/kra/synrad/*.csv
+include diffsph/spectra/Interpolations/delta/kra/synrad/kradm/*.csv
+include diffsph/spectra/Interpolations/delta/twth/synrad/*.csv
+include diffsph/spectra/Interpolations/delta/twth/synrad/twthdm/*.csv
+include diffsph/profiles/data/*.csv
