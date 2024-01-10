@@ -21,7 +21,7 @@ Indices and tables
 
 |
 
-``diffsph`` is a Python package that computes diffuse fluxes from Milky-Way satellite dwarf spheroidal (*dSph*) galaxies. It allows user to obtain
+``diffsph`` is a Python package that computes diffuse fluxes from Milky-Way satellite dwarf spheroidal (*dSph*) galaxies. It allows users to obtain
 
 * :math:`J` factor maps (relevant for gamma-ray astronomy)
  
@@ -145,7 +145,7 @@ In order to get familiar with the code, use the following set of commands to gen
 ``limits`` module
 -----------------
 
-The following example shows how to obtain limits on e.~g. the decay rate of dark matter particles using non-detection (noise level) in the field of Draco. It can take just a few minutes to compute them all in a modern laptop::
+The following example shows how to obtain limits on the decay rate of dark matter particles using non-detection (noise level) in the field of Draco. It can take just a few minutes to compute them all in a modern laptop::
 
     from diffsph import limits as lims
     import matplotlib.pyplot as plt
