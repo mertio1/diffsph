@@ -25,6 +25,16 @@ or
 svn co https://github.com/mertio1/diffsph.git
 ```
 
+For global installations, while in the *diffSph*’s main folder type:
+```bash
+python setup.py bdist_wheel
+```
+
+and (after a few minutes)
+```bash
+pip install .
+```
+
 ## Usage
 *diffSph* can be used for a variety of calculations. Particularly interesting are
 
