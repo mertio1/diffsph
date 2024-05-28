@@ -105,3 +105,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+diffsph/profiles/.DS_Store
+diffsph/profiles/.DS_Store
+diffsph/spectra/.DS_Store
+diffsph/profiles/.DS_Store
+diffsph/spectra/Interpolations/.DS_Store
+diffsph/spectra/Interpolations/delta/.DS_Store
+diffsph/spectra/Interpolations/delta/kol/.DS_Store
